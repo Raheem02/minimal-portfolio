@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Grid } from "../components/Grid"
 import { Experience } from "../components/Experience"
 import { Avatar } from "../components/Avatar"
+import { assetPath } from "../utils/assetPath"
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('experience')
@@ -12,9 +13,9 @@ export default function Home() {
     <>
       <Head>
         <title>Abdul Raheem - Software Engineer</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href={assetPath("/favicon.ico")} />
+        <link rel="icon" type="image/png" sizes="32x32" href={assetPath("/favicon.png")} />
+        <link rel="icon" type="image/svg+xml" href={assetPath("/favicon.svg")} />
         <meta name="description" content="Abdul Raheem - Software Engineer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -176,14 +177,14 @@ export default function Home() {
           </Heading>
 
           <Experience
-            image="/Insurance Management System.png"
+            image={assetPath("/Insurance Management System.png")}
             side="Ongoing"
             title="Insurance Management System"
             desc="Developing a multi-platform insurance management system that handles policy administration, customer data, and claims processing across web and mobile platforms with real-time synchronization and secure authentication."
             stack="Spring • React • Android • Azure SQL • JWT"
           />
           <Experience
-            image="/PhishGuard.png"
+            image={assetPath("/PhishGuard.png")}
             imageSize="48px"
             side="Ongoing"
             title="PhishGuard"
@@ -191,7 +192,7 @@ export default function Home() {
             stack="React • Flask • TensorFlow"
           />
           <Experience
-            image="/Learn AR.png"
+            image={assetPath("/Learn AR.png")}
             imageSize="38px"
             side="2023"
             title="Learn with AR"
@@ -199,7 +200,7 @@ export default function Home() {
             stack="Unity • Blender • C#"
           />
           <Experience
-            image="/NovaSite.png"
+            image={assetPath("/NovaSite.png")}
             imageSize="56px"
             side="2022"
             title="NovaSite"

@@ -1,5 +1,6 @@
 import { Flex, Image } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
+import { assetPath } from "../utils/assetPath"
 
 export const Header = () => {
   const [hasMounted, setMounted] = useState(false)
@@ -21,7 +22,7 @@ export const Header = () => {
       justifyContent="space-between"
     >
       <Image 
-        src="/logo.svg" 
+        src={assetPath("/logo.svg")} 
         alt="Bonhomme" 
         display={{ base: "none", md: "block" }}
       />

@@ -1,6 +1,7 @@
 import { Box, Image, Flex } from "@chakra-ui/react"
 import { keyframes } from "@emotion/react"
 import { useEffect, useState } from "react"
+import { assetPath } from "../utils/assetPath"
 
 export const Avatar = () => {
   const spin = keyframes`
@@ -40,7 +41,7 @@ export const Avatar = () => {
             maxWidth="none"
             position="absolute"
             width={{ base: "full", lg: "135%" }}
-            src="/blurs.png"
+            src={assetPath("/blurs.png")}
             role="presentation"
             animation={`${spin} infinite 5s linear`}
           />
@@ -48,7 +49,7 @@ export const Avatar = () => {
         <Image
           borderRadius="full"
           width={{ base: "80%", lg: "full" }}
-          src="/profile.png"
+          src={assetPath("/profile.png")}
           alt="Bonhomme"
         />
       </Flex>
