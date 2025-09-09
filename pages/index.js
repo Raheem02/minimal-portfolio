@@ -90,15 +90,14 @@ export default function Home() {
 
           <Box 
             position="relative" 
-            minHeight="210px"
+            minHeight="fit-content"
           >
+            {activeTab === 'experience' && (
             <Box
-              position="absolute"
               width="100%"
-              opacity={activeTab === 'experience' ? 1 : 0}
-              transform={activeTab === 'experience' ? 'translateX(0)' : 'translateX(-20px)'}
+              opacity={1}
+              transform="translateX(0)"
               transition="all 0.3s ease-in-out"
-              pointerEvents={activeTab === 'experience' ? 'auto' : 'none'}
             >
               <Experience
                 side="2023 - present"
@@ -111,14 +110,14 @@ export default function Home() {
                 </>}
               />
             </Box>
+            )}
 
+            {activeTab === 'education' && (
             <Box
-              position="absolute"
               width="100%"
-              opacity={activeTab === 'education' ? 1 : 0}
-              transform={activeTab === 'education' ? 'translateX(0)' : 'translateX(20px)'}
+              opacity={1}
+              transform="translateX(0)"
               transition="all 0.3s ease-in-out"
-              pointerEvents={activeTab === 'education' ? 'auto' : 'none'}
             >
               <Experience
                 side="2024 - 2026"
@@ -133,14 +132,14 @@ export default function Home() {
                 href="https://atria.edu/"
               />
             </Box>
+            )}
 
+            {activeTab === 'certificates' && (
             <Box
-              position="absolute"
               width="100%"
-              opacity={activeTab === 'certificates' ? 1 : 0}
-              transform={activeTab === 'certificates' ? 'translateX(0)' : 'translateX(40px)'}
+              opacity={1}
+              transform="translateX(0)"
               transition="all 0.3s ease-in-out"
-              pointerEvents={activeTab === 'certificates' ? 'auto' : 'none'}
             >
               <Experience
                 side="Oct 2024"
@@ -170,6 +169,7 @@ export default function Home() {
                 mb={4}
               />
             </Box>
+            )}
           </Box>
 
           <Heading as="h2" size="md" mt={14} mb={10}>
@@ -178,6 +178,7 @@ export default function Home() {
 
           <Experience
             image={assetPath("/Insurance Management System.png")}
+            imageWithDate={true}
             side="Ongoing"
             title="Insurance Management System"
             desc="Developing a multi-platform insurance management system that handles policy administration, customer data, and claims processing across web and mobile platforms with real-time synchronization and secure authentication."
@@ -186,6 +187,7 @@ export default function Home() {
           <Experience
             image={assetPath("/PhishGuard.png")}
             imageSize="48px"
+            imageWithDate={true}
             side="Ongoing"
             title="PhishGuard"
             desc="Developing a phishing detection app that analyzes URLs in real time to flag malicious domains, aiming to enhance online safety with a simple and responsive interface."
@@ -194,6 +196,7 @@ export default function Home() {
           <Experience
             image={assetPath("/Learn AR.png")}
             imageSize="38px"
+            imageWithDate={true}
             side="2023"
             title="Learn with AR"
             desc="Built an augmented reality learning platform that delivered immersive 3D experiences to enhance education, with continuous improvements to performance and usability."
@@ -202,6 +205,7 @@ export default function Home() {
           <Experience
             image={assetPath("/NovaSite.png")}
             imageSize="56px"
+            imageWithDate={true}
             side="2022"
             title="NovaSite"
             desc="Built a responsive web platform with interactive 3D elements, optimized for smooth performance and enhanced engagement through AI-driven content generation."

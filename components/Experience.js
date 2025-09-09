@@ -3,15 +3,16 @@ import PropTypes from "prop-types"
 import { Grid } from "./Grid"
 import { assetPath } from "../utils/assetPath"
 
-export const Experience = ({ side, title, desc, stack, image, imageSize = "36px", href, ...props }) => (
+export const Experience = ({ side, title, desc, stack, image, imageSize = "36px", href, imageWithDate = false, ...props }) => (
   <Grid fluid templateColumns="repeat(4, 1fr)" mb={10} {...props}>
     <GridItem colSpan={{ base: 4, sm: 1 }}>
       <Text color="white" opacity={0.5}>
         {side}
       </Text>
+      {imageWithDate && image && <Image width={imageSize} mt={8} src={image} alt={title} />}
     </GridItem>
     <GridItem colSpan={{ base: 4, sm: 3 }}>
-      {image && <Image width={imageSize} mb={4} src={image} alt={title} />}
+      {!imageWithDate && image && <Image width={imageSize} mb={4} src={image} alt={title} />}
       <Heading
         as={href ? "a" : "h3"}
         href={href}
@@ -20,7 +21,7 @@ export const Experience = ({ side, title, desc, stack, image, imageSize = "36px"
         size="md"
         display="flex"
         alignItems="center"
-      >
+        >
         {title}
         {href && (
           <Image
@@ -49,4 +50,5 @@ Experience.propTypes = {
   image: PropTypes.string,
   imageSize: PropTypes.string,
   href: PropTypes.string,
+  imageWithDate: PropTypes.bool,
 }
