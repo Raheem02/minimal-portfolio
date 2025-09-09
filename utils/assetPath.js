@@ -1,3 +1,3 @@
-const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio' : ''
+const basePath = ''
 
 export const assetPath = (path) => `${basePath}${path}`
