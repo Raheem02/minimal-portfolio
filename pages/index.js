@@ -39,7 +39,7 @@ export default function Home() {
             About
           </Heading>
           <Text>
-            I'm Raheem. Passionate about building reliable, scalable applications and crafting intuitive systems that perform and last. I love working on system design, APIs, and user experience, always focusing on clean code and continuous learning. Currently pursuing an MTech in Computer Science to deepen my expertise and broaden my perspective in advanced technologies.
+            I'm Abdul Raheem, a software engineer passionate about building scalable applications and intuitive systems. I focus on backend development, APIs, and clean code, and I'm currently pursuing an MTech in Computer Science to explore advanced technologies.
           </Text>
         </Box>
         <Box mb={14}>
@@ -120,7 +120,7 @@ export default function Home() {
               transition="all 0.3s ease-in-out"
             >
               <Experience
-                side="2024 - 2026"
+                side="2023 - 2025"
                 title="MTech, Computer Science and Engineering"
                 desc={<>University of Visvesvaraya College of Engineering,<br/>Bengaluru, Karnataka 560001, India</>}
                 href="https://uvce.ac.in/"
@@ -216,12 +216,6 @@ export default function Home() {
             Links
           </Heading>
 
-          <Experience
-            side="GitHub"
-            title="raheem02"
-            href="https://github.com/raheem02"
-            mb={4}
-          />
           <Experience
             side="LinkedIn"
             title="raheem02"
