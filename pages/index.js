@@ -1,6 +1,6 @@
 import { Link, Box, Text, Heading, GridItem } from "@chakra-ui/react"
 import Head from "next/head"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Grid } from "../components/Grid"
 import { Experience } from "../components/Experience"
 import { Avatar } from "../components/Avatar"
@@ -8,6 +8,60 @@ import { assetPath } from "../utils/assetPath"
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('experience')
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+  const [isSwipeMode, setIsSwipeMode] = useState(false)
+  const [isTouching, setIsTouching] = useState(false)
+  const containerRef = useRef(null)
+  
+  const tabs = ['experience', 'education', 'certificates']
+  const currentTabIndex = tabs.indexOf(activeTab)
+  
+  // Check if screen width is below 480px
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSwipeMode(window.innerWidth < 480)
+    }
+    
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+    
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
+  
+  const minSwipeDistance = 50
+  
+  const onTouchStart = (e) => {
+    if (!isSwipeMode) return
+    setIsTouching(true)
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+  
+  const onTouchMove = (e) => {
+    if (!isSwipeMode) return
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+  
+  const onTouchEnd = () => {
+    setIsTouching(false)
+    if (!isSwipeMode || !touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    
+    if (isLeftSwipe && currentTabIndex < tabs.length - 1) {
+      setActiveTab(tabs[currentTabIndex + 1])
+    }
+    if (isRightSwipe && currentTabIndex > 0) {
+      setActiveTab(tabs[currentTabIndex - 1])
+    }
+  }
+  
+  const onTouchCancel = () => {
+    setIsTouching(false)
+  }
 
   return (
     <>
@@ -43,11 +97,19 @@ export default function Home() {
           </Text>
         </Box>
         <Box mb={14}>
-          <Box display="flex" gap={12} alignItems="center" mb={10}>
-            <Box>
+          {/* Tab Headers - Always visible with responsive styling */}
+          <Box 
+            display="flex" 
+            gap={{ base: 4, sm: 12 }} 
+            alignItems="center" 
+            mb={10}
+            justifyContent={{ base: "center", sm: "flex-start" }}
+            flexWrap={{ base: "wrap", sm: "nowrap" }}
+          >
+            <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size="md" 
+                size={{ base: "sm", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('experience')}
                 color={activeTab === 'experience' ? 'white' : 'whiteAlpha.600'}
@@ -58,10 +120,10 @@ export default function Home() {
                 <Box height="2px" bg="green.500" mt={2} />
               )}
             </Box>
-            <Box>
+            <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size="md" 
+                size={{ base: "sm", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('education')}
                 color={activeTab === 'education' ? 'white' : 'whiteAlpha.600'}
@@ -72,10 +134,10 @@ export default function Home() {
                 <Box height="2px" bg="green.500" mt={2} />
               )}
             </Box>
-            <Box>
+            <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size="md" 
+                size={{ base: "sm", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('certificates')}
                 color={activeTab === 'certificates' ? 'white' : 'whiteAlpha.600'}
@@ -89,15 +151,29 @@ export default function Home() {
           </Box>
 
           <Box 
+            ref={containerRef}
             position="relative" 
             minHeight="fit-content"
+            overflow="hidden"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+            onTouchCancel={onTouchCancel}
+            style={{
+              touchAction: isSwipeMode ? 'pan-y' : 'auto',
+              userSelect: isTouching ? 'none' : 'auto'
+            }}
           >
-            {activeTab === 'experience' && (
+            {/* Experience Tab */}
             <Box
               width="100%"
-              opacity={1}
-              transform="translateX(0)"
+              opacity={activeTab === 'experience' ? 1 : 0}
+              transform={`translateX(${activeTab === 'experience' ? '0' : activeTab === 'education' ? '-100%' : activeTab === 'certificates' ? '100%' : '0'})`}
               transition="all 0.3s ease-in-out"
+              position={activeTab === 'experience' ? 'relative' : 'absolute'}
+              top={0}
+              left={0}
+              visibility={activeTab === 'experience' ? 'visible' : 'hidden'}
             >
               <Experience
                 side="2023 - present"
@@ -110,14 +186,17 @@ export default function Home() {
                 </>}
               />
             </Box>
-            )}
 
-            {activeTab === 'education' && (
+            {/* Education Tab */}
             <Box
               width="100%"
-              opacity={1}
-              transform="translateX(0)"
+              opacity={activeTab === 'education' ? 1 : 0}
+              transform={`translateX(${activeTab === 'education' ? '0' : activeTab === 'experience' ? '100%' : activeTab === 'certificates' ? '-100%' : '0'})`}
               transition="all 0.3s ease-in-out"
+              position={activeTab === 'education' ? 'relative' : 'absolute'}
+              top={0}
+              left={0}
+              visibility={activeTab === 'education' ? 'visible' : 'hidden'}
             >
               <Experience
                 side="2023 - 2025"
@@ -132,14 +211,17 @@ export default function Home() {
                 href="https://atria.edu/"
               />
             </Box>
-            )}
 
-            {activeTab === 'certificates' && (
+            {/* Certificates Tab */}
             <Box
               width="100%"
-              opacity={1}
-              transform="translateX(0)"
+              opacity={activeTab === 'certificates' ? 1 : 0}
+              transform={`translateX(${activeTab === 'certificates' ? '0' : activeTab === 'experience' ? '-100%' : activeTab === 'education' ? '100%' : '0'})`}
               transition="all 0.3s ease-in-out"
+              position={activeTab === 'certificates' ? 'relative' : 'absolute'}
+              top={0}
+              left={0}
+              visibility={activeTab === 'certificates' ? 'visible' : 'hidden'}
             >
               <Experience
                 side="Oct 2024"
@@ -169,7 +251,6 @@ export default function Home() {
                 mb={4}
               />
             </Box>
-            )}
           </Box>
 
           <Heading as="h2" size="md" mt={14} mb={10}>
