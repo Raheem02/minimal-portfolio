@@ -179,7 +179,7 @@ export default function Home() {
                 side="2023 - present"
                 title={<>Software Engineer – Ignite<span style={{color: 'red'}}>3i</span></>}
                 href="https://ignite3i.com/"
-                desc="Designing and developing scalable software solutions with a focus on performance, secure data handling, and cloud integration. Promoted from Junior Software Engineer after successfully developing application modules, supporting database migration, and contributing to performance improvements."
+                desc="Designed and developed scalable software solutions with a strong focus on performance, secure data handling, and reliable system architecture. Contributed to end-to-end project development, streamlined data workflows, improved system efficiency, and reduced manual effort through automation and optimization."
                 stack={<>
                   Java • Azure SQL • Spring Framework • JDBC<br/>
                   Hibernate • Multithreading • Cloud Integration • Git
