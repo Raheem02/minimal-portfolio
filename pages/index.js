@@ -100,7 +100,7 @@ export default function Home() {
           {/* Tab Headers - Always visible with responsive styling */}
           <Box 
             display="flex" 
-            gap={{ base: 4, sm: 12 }} 
+            gap={{ base: 6, sm: 12 }} 
             alignItems="center" 
             mb={10}
             justifyContent={{ base: "center", sm: "flex-start" }}
@@ -109,7 +109,7 @@ export default function Home() {
             <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size={{ base: "sm", sm: "md" }}
+                size={{ base: "md", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('experience')}
                 color={activeTab === 'experience' ? 'white' : 'whiteAlpha.600'}
@@ -123,7 +123,7 @@ export default function Home() {
             <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size={{ base: "sm", sm: "md" }}
+                size={{ base: "md", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('education')}
                 color={activeTab === 'education' ? 'white' : 'whiteAlpha.600'}
@@ -137,7 +137,7 @@ export default function Home() {
             <Box textAlign={{ base: "center", sm: "left" }}>
               <Heading 
                 as="h2" 
-                size={{ base: "sm", sm: "md" }}
+                size={{ base: "md", sm: "md" }}
                 cursor="pointer"
                 onClick={() => setActiveTab('certificates')}
                 color={activeTab === 'certificates' ? 'white' : 'whiteAlpha.600'}
