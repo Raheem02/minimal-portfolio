@@ -176,7 +176,7 @@ export default function Home() {
               visibility={activeTab === 'experience' ? 'visible' : 'hidden'}
             >
               <Experience
-                side="2023 - present"
+                side="2024 - present"
                 title={<>Software Engineer – Ignite<span style={{color: 'red'}}>3i</span></>}
                 href="https://ignite3i.com/"
                 desc="Designed and developed scalable software solutions with a strong focus on performance, secure data handling, and reliable system architecture. Contributed to end-to-end project development, streamlined data workflows, improved system efficiency, and reduced manual effort through automation and optimization."
