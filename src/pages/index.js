@@ -29,6 +29,10 @@ export default function Home() {
       <Head>
         <title>{`${PROFILE.name} · ${PROFILE.title}`}</title>
         <meta name="description" content={PROFILE.bio} />
+        <meta name="author" content={PROFILE.name} />
+        <meta name="keywords" content="Abdul Raheem, Backend Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure SQL, Azure Cosmos DB, Distributed Systems, Bengaluru, India" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="canonical" href="https://abdulraheem.tech" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Machine-Readable Summary" />
@@ -38,9 +42,14 @@ export default function Home() {
         {/* OpenGraph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://abdulraheem.tech" />
+        <meta property="og:site_name" content={`${PROFILE.name} Portfolio`} />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta property="og:description" content={PROFILE.bio} />
         <meta property="og:image" content="https://abdulraheem.tech/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,11 +57,13 @@ export default function Home() {
         <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta name="twitter:description" content={PROFILE.bio} />
         <meta name="twitter:image" content="https://abdulraheem.tech/og-image.png" />
+        <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
         {/* Asset preconnects */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
         <link rel="icon" href="/profile-favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/profile-favicon.png" />
 
         {/* Structured Data (JSON-LD) */}
         <script
