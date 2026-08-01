@@ -1,19 +1,19 @@
 :root {
-  /* ShaderGradient Color Palette: #606080, #8d7dca, #212121 */
-  --color-canvas-bg: #121218;
-  --color-card-bg: oklch(18% 0.02 270 / 0.85);
-  --color-card-border: oklch(28% 0.03 270 / 0.8);
-  --color-card-border-hover: oklch(45% 0.08 270);
-  
-  --color-text-primary: oklch(98% 0 0);
-  --color-text-secondary: oklch(88% 0.02 270);
-  --color-text-muted: oklch(72% 0.03 270);
-  
-  --color-accent-indigo: #8d7dca;
-  --color-accent-slate: #606080;
-  --color-accent-green: oklch(68% 0.17 150);
-  
-  --color-border-subtle: oklch(26% 0.03 270 / 0.6);
-  --color-surface-subtle: oklch(21% 0.03 270 / 0.6);
-  --color-surface-subtle-hover: oklch(26% 0.04 270 / 0.85);
+  /* ShaderGradient Color Palette: #1e5a58, #80b09e, #0d1514 */
+  --color-canvas-bg: oklch(13% 0.018 185);
+  --color-card-bg: oklch(19% 0.025 190);
+  --color-card-border: oklch(31% 0.035 190);
+  --color-card-border-hover: oklch(47% 0.07 180);
+
+  --color-text-primary: oklch(97% 0.008 170);
+  --color-text-secondary: oklch(85% 0.025 175);
+  --color-text-muted: oklch(68% 0.026 180);
+
+  --color-accent-indigo: oklch(76% 0.14 75);
+  --color-accent-slate: oklch(55% 0.06 185);
+  --color-accent-green: oklch(75% 0.15 160);
+
+  --color-border-subtle: oklch(27% 0.03 190);
+  --color-surface-subtle: oklch(22% 0.03 190);
+  --color-surface-subtle-hover: oklch(27% 0.045 190);
 }

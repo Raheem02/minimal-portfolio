@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import SidebarProfile from '../components/features/SidebarProfile';
 import BentoProjects from '../components/features/BentoProjects';
@@ -8,6 +9,8 @@ import EducationCertifications from '../components/features/EducationCertificati
 import PublicationsActivities from '../components/features/PublicationsActivities';
 import Footer from '../components/ui/Footer';
 import { PROFILE } from '../data/resumeData';
+
+const NightyNightShader = dynamic(() => import('../components/features/NightyNightShader'), { ssr: false });
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -38,18 +41,17 @@ export default function Home() {
       <Head>
         <title>{`${PROFILE.name} · ${PROFILE.title}`}</title>
         <meta name="description" content={PROFILE.bio} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.5, maximum-scale=5.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
         <link rel="icon" href="/profile-favicon.png" type="image/png" />
       </Head>
 
-      <div className="relative min-h-screen bg-(--color-canvas-bg) text-(--color-text-primary) selection:bg-(--color-accent-indigo)/30 selection:text-(--color-text-primary)">
-        {/* Subtle Localized Top Accent Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-72 bg-radial from-(--color-accent-indigo)/15 via-transparent to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="nighty-night-shell min-h-screen text-(--color-text-primary) selection:bg-(--color-accent-indigo)/30 selection:text-(--color-text-primary)">
+        <div className="nighty-night-background" aria-hidden="true"><NightyNightShader /></div>
 
         {/* Main Content Layout */}
-        <main className="max-w-6xl mx-auto px-4 py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
+        <main className="nighty-night-content max-w-6xl mx-auto px-4 py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
           <SidebarProfile />
 
           <motion.div
