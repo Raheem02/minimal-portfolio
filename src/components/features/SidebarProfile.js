@@ -10,7 +10,7 @@ export const SidebarProfile = () => {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-8 self-start"
+      className="w-full lg:w-80 xl:w-96 shrink-0 self-start lg:sticky lg:top-8"
     >
       <div className="minimal-card p-6 flex flex-col gap-6">
         {/* Profile Info Header */}
