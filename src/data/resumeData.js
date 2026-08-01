@@ -109,7 +109,7 @@ export const EDUCATION = [
     id: "mtech",
     period: "2024 – 2026",
     degree: "M.Tech in Computer Science",
-    institution: "University of Visvesvaraya College of Engineering (UVCE)",
+    institution: "University of Visvesvaraya College of Engineering",
     location: "Bengaluru, India",
     cgpa: "CGPA 8.58",
     url: "https://uvce.ac.in/",
