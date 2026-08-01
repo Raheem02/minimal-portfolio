@@ -23,7 +23,7 @@ export const CommandPalette = ({ isOpen, onClose }) => {
 
   const options = [
     {
-      label: 'Download Resume',
+      label: 'View Resume Source',
       category: 'Links',
       action: () => {
         window.open('https://raw.githubusercontent.com/raheem022/Portfolio/main/main.tex', '_blank', 'noopener,noreferrer');
@@ -54,7 +54,7 @@ export const CommandPalette = ({ isOpen, onClose }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-sm">
+      <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-(--color-overlay) backdrop-blur-sm">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: -10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
