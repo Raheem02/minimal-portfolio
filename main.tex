@@ -1,0 +1,192 @@
+%!TEX program = xelatex
+\documentclass[10pt, a4paper]{article}
+
+% ---------- packages ----------
+\usepackage{fontspec}
+\usepackage[top=0.5in, bottom=0.5in, left=0.65in, right=0.65in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{parskip}
+
+% ---------- font: Arial ----------
+\setmainfont{Arial}[
+  BoldFont = Arial Bold,
+  ItalicFont = Arial Italic,
+  BoldItalicFont = Arial Bold Italic
+]
+
+% ---------- brand color ----------
+\definecolor{brandblue}{HTML}{006EC0}
+
+% ---------- hyperlink styling ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ---------- section title formatting ----------
+\titleformat{\section}
+  {\normalfont\large\bfseries\color{brandblue}}
+  {}{0em}{\uppercase}
+  [\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% ---------- list formatting ----------
+\setlist[itemize]{
+    leftmargin=1.5em,
+    itemsep=1pt,
+    parsep=0pt,
+    topsep=2pt
+}
+
+% ---------- no page numbers ----------
+\pagestyle{empty}
+
+% ---------- helpers ----------
+\newcommand{\roleheader}[3]{%
+  \noindent\textbf{#1, #2}\hfill\textit{#3}
+}
+
+\newcommand{\projectheader}[1]{%
+  \noindent\textbf{#1}
+}
+
+\newcommand{\eduheader}[3]{%
+  \noindent\textbf{#1}\hfill\textit{#3}\\[-2pt]
+  \hspace{1.5em}#2
+}
+
+\begin{document}
+
+% ============================================================
+%  HEADER
+% ============================================================
+\noindent
+\begin{minipage}[t]{0.35\textwidth}
+    +91 9886849967 \\
+    \href{mailto:77abdulraheem@gmail.com}{77abdulraheem@gmail.com} \\
+    Vijayapura, Bengaluru, India
+\end{minipage}%
+\begin{minipage}[t]{0.30\textwidth}
+    \centering
+    {\LARGE\bfseries Abdul Raheem}
+\end{minipage}%
+\begin{minipage}[t]{0.35\textwidth}
+    \raggedleft
+    \href{https://www.linkedin.com/in/raheem02/}{linkedin.com/in/raheem02} \\
+    \href{https://abdulraheem.tech/}{abdulraheem.tech}
+\end{minipage}
+
+\vspace{2pt}
+
+% ============================================================
+%  SUMMARY
+% ============================================================
+\section{Summary}
+
+Backend Engineer who enjoys building things end to end and thinking from the user's perspective. Experienced in Java Spring Boot microservices, RESTful APIs, and Azure cloud deployments. Comfortable working across the full stack from database design and API development to CI/CD automation and backend integrations across different domains.
+
+% ============================================================
+%  WORK EXPERIENCE
+% ============================================================
+\section{Work Experience}
+
+\roleheader{Backend Developer}{Techmile (Insuremile)}{Jan 2026 -- Present}
+\begin{itemize}
+    \item Executing end-to-end migration of a Java microservice from JDK 8 to JDK 17, independently resolving Spring Boot dependency conflicts, API incompatibilities, and production-level integration issues across the upgrade lifecycle
+    \item Developing a Python-based sales automation service that auto-generates daily reports and delivers scheduled insights to the sales team via automated API pipelines
+    \item Enhancing an internal employee-facing Android application by redesigning the UI and integrating backend APIs, improving usability and operational functionality across company-wide workflows
+    \item Integrating Azure Cosmos DB as a NoSQL document store into the backend microservices architecture, enabling schema-flexible data management for high-throughput service requirements
+    \item Configuring API Gateway routing and service-to-service communication across distributed microservices, enabling reliable end-to-end workflow orchestration
+\end{itemize}
+
+\vspace{4pt}
+
+\roleheader{Software Engineer}{Ignite3i}{Nov 2024 -- Jan 2026}
+\begin{itemize}
+    \item Designed and implemented a binary logcode decoding system for network tower fault detection, parsing binary encoded tower transmission data, matching decoded outputs against fault manuals to identify root-cause errors, and updating the fault management system with findings
+    \item Built 10+ RESTful API endpoints for internal sales tooling workflows across a 5-service microservices architecture, reducing manual effort for the sales team
+    \item Delivered backend development across a complete end-to-end insurance platform spanning the full policy lifecycle: quote, proposal, KYC, payment, payment verification, and policy download
+    \item Executed backend runtime modernization across 5 services from legacy to current Spring Boot ecosystem, handling Maven dependency upgrades, API compatibility fixes, and cross-service integration changes
+    \item Engineered request/response pipeline between API gateway and downstream internal services, ensuring reliable end-to-end data flow across the distributed system
+    \item Migrated database from Supabase to Azure SQL, redesigning schema and optimizing indexes to reduce query latency
+\end{itemize}
+
+% ============================================================
+%  PROJECTS
+% ============================================================
+\section{Projects}
+
+\projectheader{Phishing URL Detection Through Multi-Signal Aggregation}
+\begin{itemize}
+    \item Engineered a multi-signal phishing detection pipeline processing 1.3M URLs, combining lexical features, WHOIS metadata, SSL validation, and threat intelligence sources
+    \item Trained and evaluated LightGBM and Random Forest classifiers achieving 97\% ROC-AUC, benchmarked across Precision, Recall, and F1 metrics
+    \item Built a FastAPI backend service for real-time URL risk scoring, delivering inference in approximately 300ms, suitable for browser or gateway-level integration
+    \item Designed modular feature extraction architecture decoupling signal sources from the model layer, enabling independent updates to each component
+\end{itemize}
+
+\vspace{4pt}
+
+\projectheader{Learn with AR -- an augmented reality-based learning platform}
+\begin{itemize}
+    \item Secured funding from the Karnataka State Council for Science and Technology (KSCST) for project development and deployment
+    \item Sole developer of an Android-based AR learning application built with Unity 3D and ARCore, delivering interactive 3D visualization across 8+ subject models spanning anatomy, astronomy, and mechanical systems
+    \item Implemented markerless AR rendering enabling real-world overlay of 3D objects without physical markers
+    \item Integrated Blender-designed 3D assets into a modular Unity scene architecture, allowing new subject models to be added without restructuring existing scenes
+    \item Optimized mobile rendering pipeline and UI navigation for stable performance on mid-range Android devices
+\end{itemize}
+
+% ============================================================
+%  TECHNICAL SKILLS
+% ============================================================
+\section{Technical Skills}
+
+\begin{tabular}{@{}ll}
+\textbf{Backend:}        & Java, Spring Boot, REST APIs, Microservices Architecture, JWT Authentication, OOP, Maven \\[2pt]
+\textbf{Cloud \& DevOps:} & Azure App Service, GitHub Actions (CI/CD) \\[2pt]
+\textbf{Databases:}      & Azure SQL, Azure Cosmos DB, PostgreSQL, Supabase, NoSQL \\[2pt]
+\textbf{Languages:}      & Python, C \\[2pt]
+\textbf{Mobile:}         & Android Development \\[2pt]
+\textbf{ML \& Data:}     & FastAPI, LightGBM, Random Forest, scikit-learn \\[2pt]
+\textbf{Tools:}          & Git, Linux, Postman \\
+\end{tabular}
+
+% ============================================================
+%  CERTIFICATIONS
+% ============================================================
+\section{Certifications}
+
+\begin{itemize}
+    \item Java Full Stack Web Development - \textit{Tap Academy}
+    \item Software Testing - \textit{NPTEL}
+    \item Foundations: Data, Data, Everywhere - \textit{Coursera}
+\end{itemize}
+
+% ============================================================
+%  ACTIVITIES
+% ============================================================
+\section{Activities}
+
+\begin{itemize}
+    \item Developed and launched an Android application for Tec-Hunt at DEXTERIX, achieving a 60\% participation rate across the college
+    \item Published 2 research papers in peer-reviewed journals on phishing detection systems
+\end{itemize}
+
+% ============================================================
+%  EDUCATION
+% ============================================================
+\section{Education}
+
+\eduheader{University of Visvesvaraya College of Engineering, Karnataka, India}{Master of Technology (MTech) in Computer Science, CGPA: 8.58}{2024 -- 2026}
+
+\vspace{6pt}
+
+\eduheader{Atria Institute of Technology, Karnataka, India}{Bachelor of Engineering in Computer Science and Engineering, CGPA: 7.42}{2019 -- 2023}
+
+\end{document}
