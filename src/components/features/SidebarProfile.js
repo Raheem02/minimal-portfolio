@@ -38,7 +38,7 @@ export const SidebarProfile = () => {
 
         {/* Bio Group */}
         <div className="flex flex-col gap-3">
-          <p className="text-sm text-(--color-text-secondary) prose-body max-w-prose">
+          <p className="text-sm text-(--color-text-secondary) prose-body w-full">
             {PROFILE.bio}
           </p>
         </div>

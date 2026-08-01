@@ -14,10 +14,33 @@
 }
 
 .nighty-night-shell {
+  position: relative;
   min-height: 100dvh;
   padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
   overflow-x: clip;
   background-color: var(--color-canvas-bg);
+}
+
+.nighty-night-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+      600px circle at 20% 0%,
+      var(--color-atmosphere-indigo),
+      transparent 70%
+    ),
+    radial-gradient(
+      500px circle at 80% 30%,
+      var(--color-atmosphere-cyan),
+      transparent 70%
+    );
+  z-index: 0;
+}
+
+.nighty-night-content {
+  position: relative;
+  z-index: 1;
 }
 
 .minimal-card {
@@ -33,7 +56,7 @@
 
 /* Uniform Paragraph Prose Styling Across Entire App */
 .prose-body {
-  max-inline-size: 72ch;
+  max-inline-size: 100%;
   font-size: 1rem;
   line-height: 1.625;
   letter-spacing: -0.011em;
