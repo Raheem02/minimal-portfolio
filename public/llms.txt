@@ -1,0 +1,31 @@
+# Abdul Raheem — Backend Engineer
+
+> Engineers scalable Java Spring Boot microservices, RESTful APIs, and cloud architecture on Azure.
+
+## Core Technical Skills
+- **Languages**: Java (JDK 8 to JDK 17), Python, C#, SQL, JavaScript
+- **Frameworks & Libraries**: Spring Boot, FastAPI, Hibernate, JDBC, Unity 3D
+- **Databases & Storage**: Azure SQL, Azure Cosmos DB, Supabase
+- **Architecture & Infrastructure**: Microservices, RESTful APIs, API Gateway, Cloud Integration, Git, Maven
+- **Mobile & Emerging Tech**: Android App Development, ARCore
+
+## Work Experience
+- **Backend Developer at Techmile (Insuremile)** (Jan 2026 – Present): Executing end-to-end migration of Java microservice from JDK 8 to JDK 17. Built Python sales automation pipelines. Integrated Azure Cosmos DB and API Gateway routing.
+- **Software Engineer at Ignite3i** (Nov 2024 – Jan 2026): Designed binary logcode decoding system for network tower fault detection. Built 10+ RESTful APIs across 5-service microservices architecture spanning complete insurance policy lifecycle.
+
+## Featured Projects
+- **Phishing URL Detection Through Multi-Signal Aggregation** (2024): Multi-signal pipeline processing 1.3M URLs across lexical, WHOIS, SSL, and threat intelligence features. LightGBM & Random Forest classifiers achieving 97% ROC-AUC. FastAPI backend delivering ~300ms risk scoring.
+- **Learn with AR** (2023): KSCST Funded Android AR learning platform built with Unity 3D & ARCore delivering interactive 3D visualizations across 8+ subject models.
+- **Insurance Management System**: Multi-platform insurance management system handling policy administration, customer data, and claims processing across web and mobile with JWT authentication.
+- **NovaSite** (2022): Responsive web platform with interactive 3D elements and AI-driven content generation.
+
+## Education & Certifications
+- **MTech in Computer Science & Engineering**: University of Visvesvaraya College of Engineering (UVCE), Bengaluru (2024 – 2026, CGPA: 8.58)
+- **BE in Computer Science & Engineering**: Atria Institute of Technology, Bengaluru (2019 – 2023, CGPA: 7.42)
+- **Certifications**: Software Testing (NPTEL), Software Engineer Intern (HackerRank), Java Full Stack Web Development (TapAcademy), Foundations: Data, Data, Everywhere (Coursera)
+
+## Contact & Links
+- Website: https://abdulraheem.tech
+- LinkedIn: https://www.linkedin.com/in/raheem02
+- GitHub: https://github.com/raheem022
+- Email: 77abdulraheem@gmail.com
