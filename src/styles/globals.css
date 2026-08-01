@@ -22,9 +22,17 @@
   border-color: var(--color-card-border-hover);
 }
 
+/* Uniform Paragraph Prose Styling Across Entire App */
 .prose-body {
+  font-size: 0.875rem; /* 14px text-sm unified everywhere */
   line-height: 1.625;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.011em;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
 
 .cv-auto {

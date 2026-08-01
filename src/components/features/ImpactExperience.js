@@ -4,9 +4,9 @@ import { WORK_EXPERIENCES } from '../../data/resumeData';
 export const ImpactExperience = () => {
   return (
     <section className="flex flex-col gap-4" aria-labelledby="experience-heading">
-      <div className="border-y border-(--color-border-subtle) py-3">
-        <h2 id="experience-heading" className="text-base font-semibold text-(--color-text-primary) tracking-tight">
-          Work & System Impact
+      <div className="border-b border-(--color-border-subtle) pb-3">
+        <h2 id="experience-heading" className="text-base font-bold text-(--color-text-primary) tracking-tight">
+          Work Experience
         </h2>
       </div>
 
@@ -19,20 +19,20 @@ export const ImpactExperience = () => {
             {/* Header section with Company, Role and Period */}
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
               <div>
-                <h3 className="text-base font-bold text-(--color-text-primary) tracking-tight">
+                <h3 className="text-base sm:text-lg font-bold text-(--color-text-primary) tracking-tight">
                   {exp.company}
                 </h3>
-                <p className="text-xs font-mono text-(--color-text-muted) mt-0.5">
+                <p className="text-xs font-mono text-(--color-text-muted) tracking-tight mt-0.5">
                   {exp.role}
                 </p>
               </div>
-              <span className="text-[11px] font-mono text-(--color-text-muted) sm:mt-1 shrink-0">
+              <span className="text-[11px] font-mono text-(--color-text-muted) tabular-nums sm:mt-1 shrink-0">
                 {exp.period}
               </span>
             </div>
 
             {/* Description */}
-            <p className="text-sm lg:text-base text-(--color-text-secondary) prose-body">
+            <p className="text-sm text-(--color-text-secondary) prose-body w-full max-w-none">
               {exp.description}
             </p>
 
@@ -42,7 +42,7 @@ export const ImpactExperience = () => {
                 {exp.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-(--color-surface-subtle) border border-(--color-border-subtle) text-(--color-text-secondary) hover:border-(--color-card-border-hover) hover:text-(--color-text-primary) transition-colors cursor-default select-none"
+                    className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-(--color-surface-subtle) border border-(--color-border-subtle) text-(--color-text-secondary) cursor-default select-none"
                   >
                     {tech}
                   </span>

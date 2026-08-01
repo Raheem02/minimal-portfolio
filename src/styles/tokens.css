@@ -1,18 +1,19 @@
 :root {
-  /* OKLCH Dark Canvas Color System */
-  --color-canvas-bg: oklch(14% 0.015 260);
-  --color-card-bg: oklch(18% 0.02 260 / 0.75);
-  --color-card-border: oklch(28% 0.02 260 / 0.8);
-  --color-card-border-hover: oklch(40% 0.03 260);
+  /* ShaderGradient Color Palette: #606080, #8d7dca, #212121 */
+  --color-canvas-bg: #121218;
+  --color-card-bg: oklch(18% 0.02 270 / 0.85);
+  --color-card-border: oklch(28% 0.03 270 / 0.8);
+  --color-card-border-hover: oklch(45% 0.08 270);
   
   --color-text-primary: oklch(98% 0 0);
-  --color-text-secondary: oklch(85% 0.02 260);
-  --color-text-muted: oklch(70% 0.02 260);
+  --color-text-secondary: oklch(88% 0.02 270);
+  --color-text-muted: oklch(72% 0.03 270);
   
-  --color-accent-indigo: oklch(62% 0.19 255);
+  --color-accent-indigo: #8d7dca;
+  --color-accent-slate: #606080;
   --color-accent-green: oklch(68% 0.17 150);
   
-  --color-border-subtle: oklch(24% 0.02 260 / 0.6);
-  --color-surface-subtle: oklch(20% 0.02 260 / 0.5);
-  --color-surface-subtle-hover: oklch(24% 0.02 260 / 0.8);
+  --color-border-subtle: oklch(26% 0.03 270 / 0.6);
+  --color-surface-subtle: oklch(21% 0.03 270 / 0.6);
+  --color-surface-subtle-hover: oklch(26% 0.04 270 / 0.85);
 }
