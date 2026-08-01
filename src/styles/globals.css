@@ -3,50 +3,28 @@
 @import "tailwindcss";
 
 @layer base {
+  html,
   body {
     background-color: var(--color-canvas-bg);
     color: var(--color-text-primary);
     font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
   }
 }
 
 .nighty-night-shell {
-  isolation: isolate;
-  position: relative;
   min-height: 100dvh;
   padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
   overflow-x: clip;
-  background: var(--color-canvas-bg);
-}
-
-.nighty-night-content {
-  position: relative;
-  z-index: 1;
-}
-
-.nighty-night-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  background: var(--color-canvas-bg);
-}
-
-.nighty-night-canvas {
-  position: absolute !important;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  opacity: 0.72;
+  background-color: var(--color-canvas-bg);
 }
 
 .minimal-card {
   background-color: var(--color-card-bg);
   border: 1px solid var(--color-card-border);
-  border-radius: 0.75rem;
-  transition: border-color 0.15s ease;
+  border-radius: var(--radius-card);
+  transition: border-color var(--dur-short) var(--ease-out);
 }
 
 .minimal-card:hover {
@@ -69,10 +47,4 @@
 
 .cv-auto {
   content-visibility: auto;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nighty-night-canvas {
-    opacity: 0.5;
-  }
 }
