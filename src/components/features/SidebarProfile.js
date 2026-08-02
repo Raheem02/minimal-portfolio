@@ -1,9 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { PROFILE, CORE_SKILLS } from '../../data/resumeData';
 import SocialIcons from '../ui/SocialIcons';
 
 export const SidebarProfile = () => {
+  const { basePath } = useRouter();
+  const profileSrc = `${basePath || ''}/profile-160.png`;
+
   return (
     <aside
       className="w-full lg:w-80 xl:w-96 shrink-0 self-start lg:sticky lg:top-8"
@@ -13,7 +17,7 @@ export const SidebarProfile = () => {
         <div className="flex items-start gap-3.5 border-b border-(--color-border-subtle) pb-5">
           <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-(--color-border-subtle) mt-0.5">
             <Image
-              src="/profile-160.png"
+              src={profileSrc}
               alt={PROFILE.name}
               width={48}
               height={48}
