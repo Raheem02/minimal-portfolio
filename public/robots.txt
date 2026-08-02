@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /studio
+Disallow: /studio/
+
+
 
 # AI Crawlers & Search Assistants
 User-agent: GPTBot

@@ -1,7 +1,8 @@
 import React from 'react';
 import { PUBLICATIONS_AND_ACTIVITIES } from '../../data/resumeData';
 
-export const PublicationsActivities = () => {
+export const PublicationsActivities = ({ items: propItems }) => {
+  const items = propItems || PUBLICATIONS_AND_ACTIVITIES;
   return (
     <section className="flex flex-col gap-4" aria-labelledby="research-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
@@ -11,7 +12,7 @@ export const PublicationsActivities = () => {
       </div>
 
       <div className="flex flex-col divide-y divide-(--color-border-subtle)">
-        {PUBLICATIONS_AND_ACTIVITIES.map((item) => (
+        {items.map((item) => (
           <article key={item.id || item.title} className="py-5 first:pt-1 last:pb-1 flex flex-col gap-2 cv-auto">
             <div className="flex items-center justify-between gap-2">
               <h3 className="text-sm sm:text-base font-bold text-(--color-text-primary) tracking-tight">{item.title}</h3>

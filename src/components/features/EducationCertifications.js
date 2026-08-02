@@ -1,7 +1,9 @@
 import React from 'react';
 import { EDUCATION, CERTIFICATIONS } from '../../data/resumeData';
 
-export const EducationCertifications = () => {
+export const EducationCertifications = ({ education: propEdu, certifications: propCerts }) => {
+  const education = propEdu || EDUCATION;
+  const certifications = propCerts || CERTIFICATIONS;
   return (
     <section id="education" className="flex flex-col gap-6" aria-labelledby="education-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
@@ -13,7 +15,7 @@ export const EducationCertifications = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Education Column */}
         <div className="minimal-card p-5 flex flex-col divide-y divide-(--color-border-subtle) h-full justify-center">
-          {EDUCATION.map((edu) => (
+          {education.map((edu) => (
             <div key={edu.id || edu.degree} className="py-3 first:pt-0 last:pb-0 flex flex-col gap-1 cv-auto">
               <div className="flex items-center justify-between gap-2">
                 <h3 className="text-xs sm:text-sm font-bold text-(--color-text-primary) tracking-tight">{edu.degree}</h3>
@@ -29,7 +31,7 @@ export const EducationCertifications = () => {
 
         {/* Certifications Column */}
         <div className="minimal-card p-5 flex flex-col divide-y divide-(--color-border-subtle) h-full justify-center">
-          {CERTIFICATIONS.map((cert) => (
+          {certifications.map((cert) => (
             <div key={cert.title} className="py-2.5 first:pt-0 last:pb-0 flex items-center justify-between gap-3 cv-auto">
               <h3 className="text-xs sm:text-sm font-semibold text-(--color-text-primary) truncate">
                 {cert.title}

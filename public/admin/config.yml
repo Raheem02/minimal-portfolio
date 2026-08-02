@@ -1,0 +1,108 @@
+backend:
+  name: github
+  repo: Raheem02/minimal-portfolio
+  branch: main
+  site_domain: raheem.page
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: https://raheem.page
+
+collections:
+  - name: "content"
+    label: "Portfolio Data"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "src/content/resumeData.json"
+        label: "Resume & Portfolio Information"
+        name: "resumeData"
+        fields:
+          - label: "Profile Settings"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Status Badge", name: "status", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+              - { label: "Website URL", name: "website", widget: "string" }
+              - { label: "Meta Description", name: "metaDescription", widget: "text" }
+              - { label: "Bio Summary", name: "bio", widget: "text" }
+              - label: "Social Links"
+                name: "social"
+                widget: "object"
+                fields:
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "LinkedIn", name: "linkedin", widget: "string" }
+                  - { label: "GitHub", name: "github", widget: "string" }
+
+          - label: "Core Skills"
+            name: "coreSkills"
+            widget: "list"
+            field: { label: "Skill Name", name: "skill", widget: "string" }
+
+          - label: "Work Experiences"
+            name: "workExperiences"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Role Title", name: "role", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Company URL", name: "companyUrl", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Tech Stack"
+                name: "stack"
+                widget: "list"
+                field: { label: "Technology", name: "tech", widget: "string" }
+              - { label: "Featured Section", name: "featured", widget: "boolean", default: true }
+
+          - label: "Featured Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Repository / Demo URL", name: "repoUrl", widget: "string" }
+              - label: "Tech Stack"
+                name: "stack"
+                widget: "list"
+                field: { label: "Technology", name: "tech", widget: "string" }
+              - { label: "Featured", name: "featured", widget: "boolean", default: true }
+
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Degree Title", name: "degree", widget: "string" }
+              - { label: "Institution", name: "institution", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "CGPA / Grade", name: "cgpa", widget: "string" }
+              - { label: "Institution URL", name: "url", widget: "string", required: false }
+
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - { label: "Certification Title", name: "title", widget: "string" }
+              - { label: "Issuer", name: "issuer", widget: "string" }
+              - { label: "Credential ID / Code", name: "idCode", widget: "string", required: false }
+              - { label: "Year Issued", name: "year", widget: "string" }
+
+          - label: "Publications & Activities"
+            name: "publicationsAndActivities"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Period / Tag", name: "period", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }

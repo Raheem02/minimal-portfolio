@@ -1,7 +1,8 @@
 import React from 'react';
 import { PROJECTS } from '../../data/resumeData';
 
-export const BentoProjects = () => {
+export const BentoProjects = ({ projects: propProjects }) => {
+  const projects = propProjects || PROJECTS;
   return (
     <section id="projects" className="flex flex-col gap-5" aria-labelledby="projects-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
@@ -12,7 +13,7 @@ export const BentoProjects = () => {
 
       {/* Horizontal Side-by-Side Projects Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-        {PROJECTS.map((project) => (
+        {projects.map((project) => (
           <div
             key={project.id || project.title}
             className="minimal-card p-5 flex flex-col justify-between gap-4 h-full cv-auto"

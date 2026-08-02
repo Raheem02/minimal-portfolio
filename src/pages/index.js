@@ -10,6 +10,7 @@ import EducationCertifications from '../components/features/EducationCertificati
 import PublicationsActivities from '../components/features/PublicationsActivities';
 import Footer from '../components/ui/Footer';
 import { PROFILE } from '../data/resumeData';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const pageVariants = {
   hidden: { opacity: 0 },
@@ -23,16 +24,18 @@ const pageVariants = {
 };
 
 export default function Home() {
+  const { data } = usePortfolioData();
   const prefersReducedMotion = useReducedMotion();
   const { basePath } = useRouter();
   const base = basePath || '';
+  const profile = data?.profile || PROFILE;
 
   return (
     <>
       <Head>
-        <title>{`${PROFILE.name} · ${PROFILE.title}`}</title>
-        <meta name="description" content={PROFILE.metaDescription} />
-        <meta name="author" content={PROFILE.name} />
+        <title>{`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`}</title>
+        <meta name="description" content={profile.metaDescription || PROFILE.metaDescription} />
+        <meta name="author" content={profile.name || PROFILE.name} />
         <meta name="keywords" content="Abdul Raheem, Backend Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure SQL, Azure Cosmos DB, Distributed Systems, Bengaluru, India" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
@@ -46,10 +49,10 @@ export default function Home() {
         {/* OpenGraph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://raheem.page/" />
-        <meta property="og:site_name" content={`${PROFILE.name} Portfolio`} />
+        <meta property="og:site_name" content={`${profile.name || PROFILE.name} Portfolio`} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
-        <meta property="og:description" content={PROFILE.metaDescription} />
+        <meta property="og:title" content={`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`} />
+        <meta property="og:description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta property="og:image" content="https://raheem.page/og-image.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -58,8 +61,8 @@ export default function Home() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://raheem.page/" />
-        <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
-        <meta name="twitter:description" content={PROFILE.metaDescription} />
+        <meta name="twitter:title" content={`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`} />
+        <meta name="twitter:description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
@@ -145,13 +148,13 @@ export default function Home() {
           animate={prefersReducedMotion ? false : 'visible'}
           className="nighty-night-content max-w-6xl mx-auto px-4 py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-10 items-start"
         >
-          <SidebarProfile />
+          <SidebarProfile profile={data?.profile} coreSkills={data?.coreSkills} />
 
           <div className="flex-1 flex flex-col gap-10 min-w-0">
-            <ImpactExperience />
-            <BentoProjects />
-            <EducationCertifications />
-            <PublicationsActivities />
+            <ImpactExperience experiences={data?.workExperiences} />
+            <BentoProjects projects={data?.projects} />
+            <EducationCertifications education={data?.education} certifications={data?.certifications} />
+            <PublicationsActivities items={data?.publicationsAndActivities} />
             <Footer />
           </div>
         </motion.main>

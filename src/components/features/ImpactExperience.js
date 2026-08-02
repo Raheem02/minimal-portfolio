@@ -1,7 +1,8 @@
 import React from 'react';
 import { WORK_EXPERIENCES } from '../../data/resumeData';
 
-export const ImpactExperience = () => {
+export const ImpactExperience = ({ experiences: propExperiences }) => {
+  const experiences = propExperiences || WORK_EXPERIENCES;
   return (
     <section id="experience" className="flex flex-col gap-4" aria-labelledby="experience-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
@@ -11,7 +12,7 @@ export const ImpactExperience = () => {
       </div>
 
       <div className="flex flex-col divide-y divide-(--color-border-subtle)">
-        {WORK_EXPERIENCES.map((exp) => (
+        {experiences.map((exp) => (
           <div
             key={exp.id || exp.company}
             className="py-6 first:pt-2 last:pb-2 flex flex-col gap-3 cv-auto"
