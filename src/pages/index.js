@@ -41,6 +41,7 @@ export default function Home() {
         <link rel="alternate" type="text/plain" href={`${base}/llms.txt`} title="LLM Machine-Readable Summary" />
         <link rel="alternate" type="text/markdown" href={`${base}/resume.md`} title="Machine-Readable Resume" />
         <meta name="indexnow-key" content="5f4b8e21a09c4d3e8f1b6a7c9d0e2f4a" />
+        <meta name="msvalidate.01" content="C0B719F693E4D9FFE05ED9756C6D9366" />
         
         {/* OpenGraph / Facebook */}
         <meta property="og:type" content="website" />
