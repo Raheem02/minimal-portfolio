@@ -3,7 +3,7 @@ import { EDUCATION, CERTIFICATIONS } from '../../data/resumeData';
 
 export const EducationCertifications = () => {
   return (
-    <section className="flex flex-col gap-6" aria-labelledby="education-heading">
+    <section id="education" className="flex flex-col gap-6" aria-labelledby="education-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
         <h2 id="education-heading" className="text-base font-bold text-(--color-text-primary) tracking-tight">
           Education & Certifications

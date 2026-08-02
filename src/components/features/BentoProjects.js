@@ -3,7 +3,7 @@ import { PROJECTS } from '../../data/resumeData';
 
 export const BentoProjects = () => {
   return (
-    <section className="flex flex-col gap-5" aria-labelledby="projects-heading">
+    <section id="projects" className="flex flex-col gap-5" aria-labelledby="projects-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
         <h2 id="projects-heading" className="text-base font-bold text-(--color-text-primary) tracking-tight">
           Featured Engineering Projects

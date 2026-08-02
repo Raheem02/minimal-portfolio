@@ -29,17 +29,21 @@ export const SidebarProfile = () => {
           </div>
           <div className="flex flex-col gap-1">
             <h1 className="text-base font-bold text-(--color-text-primary) tracking-tight leading-tight">
-              {PROFILE.name}
+              {PROFILE.name} — {PROFILE.title}
             </h1>
-            <p className="text-xs font-mono text-(--color-text-secondary)">
-              {PROFILE.title}
-            </p>
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-(--color-accent-green) font-medium pt-0.5">
               <span className="w-1.5 h-1.5 rounded-full bg-(--color-accent-green)" />
               <span>{PROFILE.status}</span>
             </div>
           </div>
         </div>
+
+        {/* Section Navigation Links */}
+        <nav aria-label="Section Navigation" className="flex flex-wrap gap-2.5 text-xs font-mono text-(--color-text-muted) border-b border-(--color-border-subtle) pb-4">
+          <a href="#experience" className="hover:text-(--color-text-primary) transition-colors">#experience</a>
+          <a href="#projects" className="hover:text-(--color-text-primary) transition-colors">#projects</a>
+          <a href="#education" className="hover:text-(--color-text-primary) transition-colors">#education</a>
+        </nav>
 
         {/* Bio Group */}
         <div className="flex flex-col gap-3">
