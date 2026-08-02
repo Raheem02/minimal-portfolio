@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# AI Crawlers & Search Assistants
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Machine-Readable Context for AI Agents
+# https://llmstxt.org
+# https://raheem.page/llms.txt
+# https://raheem.page/resume.md
+
+Sitemap: https://raheem.page/sitemap.xml
