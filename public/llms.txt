@@ -25,7 +25,7 @@
 - **Certifications**: Software Testing (NPTEL), Software Engineer Intern (HackerRank), Java Full Stack Web Development (TapAcademy), Foundations: Data, Data, Everywhere (Coursera)
 
 ## Contact & Links
-- Website: https://abdulraheem.tech
+- Website: https://raheem.page/
 - LinkedIn: https://www.linkedin.com/in/raheem02
 - GitHub: https://github.com/raheem022
 - Email: 77abdulraheem@gmail.com
