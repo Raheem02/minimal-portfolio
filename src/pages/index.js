@@ -37,29 +37,29 @@ export default function Home() {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="canonical" href="https://abdulraheem.tech" />
+        <link rel="canonical" href="https://raheem.page/" />
         <link rel="alternate" type="text/plain" href={`${base}/llms.txt`} title="LLM Machine-Readable Summary" />
         <link rel="alternate" type="text/markdown" href={`${base}/resume.md`} title="Machine-Readable Resume" />
         <meta name="indexnow-key" content="5f4b8e21a09c4d3e8f1b6a7c9d0e2f4a" />
         
         {/* OpenGraph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://abdulraheem.tech" />
+        <meta property="og:url" content="https://raheem.page/" />
         <meta property="og:site_name" content={`${PROFILE.name} Portfolio`} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta property="og:description" content={PROFILE.bio} />
-        <meta property="og:image" content="https://abdulraheem.tech/og-image.png" />
+        <meta property="og:image" content="https://raheem.page/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://abdulraheem.tech" />
+        <meta name="twitter:url" content="https://raheem.page/" />
         <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta name="twitter:description" content={PROFILE.bio} />
-        <meta name="twitter:image" content="https://abdulraheem.tech/og-image.png" />
+        <meta name="twitter:image" content="https://raheem.page/og-image.png" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
         {/* Asset preconnects */}
@@ -77,7 +77,7 @@ export default function Home() {
               '@graph': [
                 {
                   '@type': 'Person',
-                  '@id': 'https://abdulraheem.tech/#person',
+                  '@id': 'https://raheem.page/#person',
                   name: PROFILE.name,
                   jobTitle: PROFILE.title,
                   worksFor: {
@@ -113,11 +113,11 @@ export default function Home() {
                 },
                 {
                   '@type': 'ProfilePage',
-                  '@id': 'https://abdulraheem.tech/#webpage',
+                  '@id': 'https://raheem.page/#webpage',
                   url: PROFILE.website,
                   name: `${PROFILE.name} · ${PROFILE.title}`,
                   description: PROFILE.bio,
-                  mainEntity: { '@id': 'https://abdulraheem.tech/#person' },
+                  mainEntity: { '@id': 'https://raheem.page/#person' },
                 },
               ],
             }),

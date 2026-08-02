@@ -8,7 +8,7 @@
 - **Location**: Bengaluru, India
 - **Status**: Available for Roles
 - **Email**: 77abdulraheem@gmail.com
-- **Website**: https://abdulraheem.tech
+- **Website**: https://raheem.page/
 - **LinkedIn**: https://www.linkedin.com/in/raheem02
 - **GitHub**: https://github.com/raheem022
 

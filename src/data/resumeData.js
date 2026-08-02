@@ -10,7 +10,7 @@ export const PROFILE = {
   location: "Bengaluru, India",
   email: "77abdulraheem@gmail.com",
   linkedin: "https://www.linkedin.com/in/raheem02",
-  website: "https://abdulraheem.tech",
+  website: "https://raheem.page/",
   bio: "Backend Engineer focused on building robust distributed systems, Java Spring Boot microservices, RESTful APIs, and cloud deployments. Experienced in leading end-to-end service migration, database architecture, and production API design across enterprise InsureTech and security domains.",
   resumeUrl: null,
   social: {
