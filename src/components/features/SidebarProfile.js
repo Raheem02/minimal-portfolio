@@ -27,11 +27,14 @@ export const SidebarProfile = () => {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-0.5">
             <h1 className="text-base font-bold text-(--color-text-primary) tracking-tight leading-tight">
-              {PROFILE.name} — {PROFILE.title}
+              {PROFILE.name}
             </h1>
-            <div className="flex items-center gap-1.5 text-[11px] font-mono text-(--color-accent-green) font-medium pt-0.5">
+            <p className="text-xs font-mono text-(--color-text-secondary)">
+              {PROFILE.title}
+            </p>
+            <div className="flex items-center gap-1.5 text-[11px] font-mono text-(--color-accent-green) font-medium pt-1">
               <span className="w-1.5 h-1.5 rounded-full bg-(--color-accent-green)" />
               <span>{PROFILE.status}</span>
             </div>
