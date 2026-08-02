@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <Head>
         <title>{`${PROFILE.name} · ${PROFILE.title}`}</title>
-        <meta name="description" content={PROFILE.bio} />
+        <meta name="description" content={PROFILE.metaDescription} />
         <meta name="author" content={PROFILE.name} />
         <meta name="keywords" content="Abdul Raheem, Backend Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure SQL, Azure Cosmos DB, Distributed Systems, Bengaluru, India" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -48,7 +48,7 @@ export default function Home() {
         <meta property="og:site_name" content={`${PROFILE.name} Portfolio`} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
-        <meta property="og:description" content={PROFILE.bio} />
+        <meta property="og:description" content={PROFILE.metaDescription} />
         <meta property="og:image" content="https://raheem.page/og-image.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -58,7 +58,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://raheem.page/" />
         <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
-        <meta name="twitter:description" content={PROFILE.bio} />
+        <meta name="twitter:description" content={PROFILE.metaDescription} />
         <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 

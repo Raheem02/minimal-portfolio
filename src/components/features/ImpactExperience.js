@@ -3,7 +3,7 @@ import { WORK_EXPERIENCES } from '../../data/resumeData';
 
 export const ImpactExperience = () => {
   return (
-    <section className="flex flex-col gap-4" aria-labelledby="experience-heading">
+    <section id="experience" className="flex flex-col gap-4" aria-labelledby="experience-heading">
       <div className="border-b border-(--color-border-subtle) pb-3">
         <h2 id="experience-heading" className="text-base font-bold text-(--color-text-primary) tracking-tight">
           Work Experience
