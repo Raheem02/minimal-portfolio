@@ -28,7 +28,7 @@ export const BentoProjects = () => {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-(--color-text-muted) hover:text-(--color-accent-blue) transition-colors flex items-center gap-1 text-xs font-mono"
+                      className="text-(--color-text-muted) hover:text-(--color-accent-cyan) transition-colors flex items-center gap-1 text-xs font-mono"
                       title="View GitHub Repository"
                       aria-label={`View GitHub repository for ${project.title}`}
                     >
