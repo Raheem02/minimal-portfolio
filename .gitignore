@@ -49,3 +49,4 @@ public/sitemap.xml
 audit-report.md
 scratch/
 .playwright-mcp/
+*-audit/
