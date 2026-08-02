@@ -22,6 +22,7 @@ export const SidebarProfile = () => {
               width={48}
               height={48}
               priority
+              decoding="async"
               sizes="48px"
               className="object-cover"
             />
