@@ -28,12 +28,10 @@ export const SidebarProfile = () => {
             />
           </div>
           <div className="flex flex-col gap-0.5">
-            <h1 className="text-base font-bold text-(--color-text-primary) tracking-tight leading-tight">
-              {PROFILE.name}
+            <h1 className="text-base font-bold text-(--color-text-primary) tracking-tight leading-tight flex flex-col gap-0.5">
+              <span>{PROFILE.name}</span>
+              <span className="text-xs font-mono font-normal text-(--color-text-secondary)">{PROFILE.title}</span>
             </h1>
-            <p className="text-xs font-mono text-(--color-text-secondary)">
-              {PROFILE.title}
-            </p>
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-(--color-accent-green) font-medium pt-1">
               <span className="w-1.5 h-1.5 rounded-full bg-(--color-accent-green)" />
               <span>{PROFILE.status}</span>
