@@ -16,7 +16,7 @@ export const PROFILE = {
   social: {
     email: "77abdulraheem@gmail.com",
     linkedin: "https://www.linkedin.com/in/raheem02",
-    github: "https://github.com/raheem022",
+    github: "https://github.com/Raheem02",
   },
 }
 
@@ -83,6 +83,7 @@ export const PROJECTS = [
     title: "Phishing URL Detection System",
     description:
       "Developed a multi-signal phishing URL detection pipeline analyzing 1.3 million URLs by aggregating lexical features, WHOIS metadata, SSL validation, and threat intelligence sources. Trained LightGBM and Random Forest classification models and built a FastAPI backend service delivering real-time URL risk scoring with sub-300ms inference latency.",
+    repoUrl: "https://github.com/Raheem02/minimal-portfolio",
     stack: [
       "FastAPI",
       "LightGBM",
@@ -99,6 +100,7 @@ export const PROJECTS = [
     title: "Learn with AR Platform",
     description:
       "Designed and developed an Android AR learning application funded by the Karnataka State Council for Science and Technology (KSCST). Built with Unity 3D and ARCore to deliver interactive 3D visualizations across 8 educational modules. Implemented markerless AR rendering, integrated Blender 3D assets, and optimized mobile graphics performance.",
+    repoUrl: "https://github.com/Raheem02/minimal-portfolio",
     stack: ["Unity 3D", "ARCore", "C#", "Blender", "Android"],
     featured: true,
   },

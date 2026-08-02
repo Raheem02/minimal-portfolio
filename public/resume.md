@@ -10,7 +10,7 @@
 - **Email**: 77abdulraheem@gmail.com
 - **Website**: https://raheem.page/
 - **LinkedIn**: https://www.linkedin.com/in/raheem02
-- **GitHub**: https://github.com/raheem022
+- **GitHub**: https://github.com/Raheem02
 
 ## Technical Skills
 - **Core Languages**: Java (JDK 8, JDK 17), Python, C#, SQL, JavaScript
