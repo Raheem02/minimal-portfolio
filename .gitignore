@@ -43,3 +43,9 @@ public/sitemap.xml
 *.swp
 *.swo
 *~
+
+# Antigravity / Impeccable / Audit temporary files
+.impeccable/
+audit-report.md
+scratch/
+.playwright-mcp/

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { motion, useReducedMotion } from 'framer-motion';
 import SidebarProfile from '../components/features/SidebarProfile';
 import NightyNightShader from '../components/features/NightyNightShader';
@@ -23,6 +24,8 @@ const pageVariants = {
 
 export default function Home() {
   const prefersReducedMotion = useReducedMotion();
+  const { basePath } = useRouter();
+  const base = basePath || '';
 
   return (
     <>
@@ -35,8 +38,8 @@ export default function Home() {
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="canonical" href="https://abdulraheem.tech" />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Machine-Readable Summary" />
-        <link rel="alternate" type="text/markdown" href="/resume.md" title="Machine-Readable Resume" />
+        <link rel="alternate" type="text/plain" href={`${base}/llms.txt`} title="LLM Machine-Readable Summary" />
+        <link rel="alternate" type="text/markdown" href={`${base}/resume.md`} title="Machine-Readable Resume" />
         <meta name="indexnow-key" content="5f4b8e21a09c4d3e8f1b6a7c9d0e2f4a" />
         
         {/* OpenGraph / Facebook */}
@@ -62,8 +65,8 @@ export default function Home() {
         {/* Asset preconnects */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
-        <link rel="icon" href="/profile-favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/profile-favicon.png" />
+        <link rel="icon" href={`${base}/profile-favicon.png`} type="image/png" />
+        <link rel="apple-touch-icon" href={`${base}/profile-favicon.png`} />
 
         {/* Structured Data (JSON-LD) */}
         <script
