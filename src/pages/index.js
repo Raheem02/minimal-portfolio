@@ -62,9 +62,10 @@ export default function Home() {
         <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
-        {/* Asset preconnects */}
+        {/* Asset preconnects and LCP Preload */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+        <link rel="preload" href={`${base}/profile-160.webp`} as="image" type="image/webp" fetchPriority="high" />
         <link rel="icon" href={`${base}/profile-favicon.webp`} type="image/webp" />
         <link rel="apple-touch-icon" href={`${base}/profile-favicon.webp`} />
 
