@@ -49,7 +49,7 @@ export default function Home() {
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta property="og:description" content={PROFILE.bio} />
-        <meta property="og:image" content="https://raheem.page/og-image.png" />
+        <meta property="og:image" content="https://raheem.page/og-image.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
@@ -59,14 +59,14 @@ export default function Home() {
         <meta name="twitter:url" content="https://raheem.page/" />
         <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
         <meta name="twitter:description" content={PROFILE.bio} />
-        <meta name="twitter:image" content="https://raheem.page/og-image.png" />
+        <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
 
         {/* Asset preconnects */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
-        <link rel="icon" href={`${base}/profile-favicon.png`} type="image/png" />
-        <link rel="apple-touch-icon" href={`${base}/profile-favicon.png`} />
+        <link rel="icon" href={`${base}/profile-favicon.webp`} type="image/webp" />
+        <link rel="apple-touch-icon" href={`${base}/profile-favicon.webp`} />
 
         {/* Structured Data (JSON-LD) */}
         <script
@@ -118,6 +118,13 @@ export default function Home() {
                   name: `${PROFILE.name} · ${PROFILE.title}`,
                   description: PROFILE.bio,
                   mainEntity: { '@id': 'https://raheem.page/#person' },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://raheem.page/#website',
+                  url: PROFILE.website,
+                  name: `${PROFILE.name} Portfolio`,
+                  publisher: { '@id': 'https://raheem.page/#person' },
                 },
               ],
             }),

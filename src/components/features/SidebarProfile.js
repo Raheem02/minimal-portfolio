@@ -6,7 +6,7 @@ import SocialIcons from '../ui/SocialIcons';
 
 export const SidebarProfile = () => {
   const { basePath } = useRouter();
-  const profileSrc = `${basePath || ''}/profile-160.png`;
+  const profileSrc = `${basePath || ''}/profile-160.webp`;
 
   return (
     <aside
@@ -67,7 +67,7 @@ export const SidebarProfile = () => {
         {/* Source action */}
         <div>
           <a
-            href="https://github.com/raheem022/Portfolio"
+            href="https://github.com/Raheem02/minimal-portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full min-h-[44px] px-4 rounded-lg bg-(--color-surface-subtle) hover:bg-(--color-surface-subtle-hover) border border-(--color-border-subtle) hover:border-(--color-card-border-hover) text-(--color-text-primary) text-xs font-medium flex items-center justify-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-(--color-accent-indigo) focus-visible:outline-offset-2 select-none"
