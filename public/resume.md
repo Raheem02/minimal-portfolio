@@ -9,7 +9,7 @@
 - **Status**: Available for Roles (30 Days Notice)
 - **Email**: 77abdulraheem@gmail.com
 - **Website**: https://raheem.page/
-- **LinkedIn**: https://www.linkedin.com/in/raheem02
+- **LinkedIn**: https://www.linkedin.com/in/abdulraheem-swe
 - **GitHub**: https://github.com/Raheem02
 
 ## Technical Skills

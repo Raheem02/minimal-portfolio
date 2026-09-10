@@ -9,14 +9,14 @@ export const PROFILE = {
   status: "Available for Roles",
   location: "Bengaluru, India",
   email: "77abdulraheem@gmail.com",
-  linkedin: "https://www.linkedin.com/in/raheem02",
-  website: "https://raheem.page/",
+  linkedin: "https://www.linkedin.com/in/abdulraheem-swe",
+  website: "https://raheem.page",
   metaDescription: "Software Engineer in Bengaluru with 2 years of backend experience in Java, Spring Boot, Python, Azure Cosmos DB, PostgreSQL, and Redis.",
   bio: "Software Engineer with 2 years of production experience building distributed microservices, low-latency database architectures, and asynchronous data pipelines in Java (Spring Boot) and Python (FastAPI). Contractual notice period: 30 days.",
   resumeUrl: null,
   social: {
     email: "77abdulraheem@gmail.com",
-    linkedin: "https://www.linkedin.com/in/raheem02",
+    linkedin: "https://www.linkedin.com/in/abdulraheem-swe",
     github: "https://github.com/Raheem02",
   },
 }
