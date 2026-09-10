@@ -36,7 +36,7 @@ export default function Home() {
         <title>{`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`}</title>
         <meta name="description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta name="author" content={profile.name || PROFILE.name} />
-        <meta name="keywords" content="Abdul Raheem, Backend Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure SQL, Azure Cosmos DB, Distributed Systems, Bengaluru, India" />
+        <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Development Engineer, SDE, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, Bengaluru, UVCE" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -56,7 +56,7 @@ export default function Home() {
         <meta property="og:image" content="https://raheem.page/og-image.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
+        <meta property="og:image:alt" content="Abdul Raheem - Software Engineer Portfolio" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -64,7 +64,7 @@ export default function Home() {
         <meta name="twitter:title" content={`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`} />
         <meta name="twitter:description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
-        <meta name="twitter:image:alt" content="Abdul Raheem - Backend Engineer Portfolio" />
+        <meta name="twitter:image:alt" content="Abdul Raheem - Software Engineer Portfolio" />
 
         {/* Asset preconnects and LCP Preload */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
@@ -105,14 +105,20 @@ export default function Home() {
                   knowsAbout: [
                     'Java',
                     'Spring Boot',
+                    'Distributed Systems',
                     'Microservices',
                     'REST APIs',
+                    'Azure Cosmos DB',
+                    'PostgreSQL',
+                    'Redis',
+                    'Rate Limiting',
+                    'Caching',
+                    'Connection Pooling',
                     'Python',
                     'FastAPI',
-                    'Azure SQL',
-                    'Azure Cosmos DB',
-                    'Distributed Systems',
-                    'Phishing Detection',
+                    'Docker',
+                    'TCP/IP Sockets',
+                    'Database Optimization',
                   ],
                   sameAs: [PROFILE.linkedin, PROFILE.social.github],
                   url: PROFILE.website,

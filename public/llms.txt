@@ -1,6 +1,6 @@
 # Abdul Raheem
 
-> Backend Engineer specializing in Java Spring Boot microservices, RESTful APIs, and Azure cloud architecture.
+> Software Engineer specializing in Java (Spring Boot) microservices, distributed systems, and Azure Cosmos DB database architectures.
 
 ## Primary Resources
 
@@ -9,8 +9,8 @@
 
 ## Professional Experience & Achievements
 
-- [Techmile (Insuremile)](https://raheem.page/): Leading Java microservices upgrade from JDK 8 to JDK 17, building Python automation scripts, and integrating Azure Cosmos DB with API Gateway.
-- [Ignite3i](https://raheem.page/): Engineered binary log-code decoding system for tower fault detection, built 10+ RESTful APIs across 5-service insurance microservices architecture, and migrated databases to Azure SQL.
+- [Insuremile](https://raheem.page/): Responsible for backend microservices architecture, implementing distributed rate limiting, multi-tier Redis caching, HikariCP connection pool tuning, and sub-50ms Azure Cosmos DB query latency.
+- [Ignite3i](https://raheem.page/): Engineered low-latency Java socket telemetry ingestion decoding packets from 1,000+ telecom towers over TCP/IP, built idempotent payment APIs, and migrated database infrastructure to Azure SQL.
 
 ## Key Projects
 
@@ -20,8 +20,8 @@
 
 ## Education & Qualifications
 
-- [MTech Computer Science](https://uvce.ac.in/): University of Visvesvaraya College of Engineering, Bengaluru (2024–2026, CGPA 8.58).
-- [BE Computer Science](https://atria.edu/): Atria Institute of Technology, Bengaluru (2019–2023, CGPA 7.42).
+- [MTech Computer Science](https://uvce.ac.in/): University of Visvesvaraya College of Engineering, Bengaluru (2024 - 2026, CGPA 8.58).
+- [BE Computer Science](https://atria.edu/): Atria Institute of Technology, Bengaluru (2019 - 2023, CGPA 7.42).
 
 ## Official Profiles & Direct Contact
 

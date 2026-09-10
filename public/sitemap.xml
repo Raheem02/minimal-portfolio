@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://raheem.page/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://raheem.page/og-image.webp</image:loc>
-      <image:title>Abdul Raheem - Backend Engineer</image:title>
+      <image:title>Abdul Raheem - Software Engineer</image:title>
     </image:image>
     <image:image>
       <image:loc>https://raheem.page/profile-160.webp</image:loc>

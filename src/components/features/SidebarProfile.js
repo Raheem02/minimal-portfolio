@@ -143,7 +143,7 @@ export const SidebarProfile = ({ profile: propProfile, coreSkills: propSkills })
   const handleDownloadResume = async (e) => {
     e.preventDefault();
 
-    // Trigger instant PDF download — zero delay, no popups
+    // Trigger instant PDF download: zero delay, no popups
     await triggerFileDownload();
 
     if (typeof window === 'undefined') return;

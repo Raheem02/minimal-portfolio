@@ -1,14 +1,14 @@
 {
   "profile": {
     "name": "Abdul Raheem",
-    "title": "Backend Engineer",
+    "title": "Software Engineer",
     "status": "Available for Roles",
     "location": "Bengaluru, India",
     "email": "77abdulraheem@gmail.com",
     "linkedin": "https://www.linkedin.com/in/raheem02",
     "website": "https://raheem.page/",
-    "metaDescription": "Backend Engineer specializing in Java Spring Boot microservices, RESTful APIs, Azure SQL, and cloud deployments. View experience and projects.",
-    "bio": "Backend Engineer focused on building robust distributed systems, Java Spring Boot microservices, RESTful APIs, and cloud deployments. Experienced in leading end-to-end service migration, database architecture, and production API design across enterprise InsureTech and security domains.",
+    "metaDescription": "Software Engineer in Bengaluru with 2 years of backend experience in Java, Spring Boot, Python, Azure Cosmos DB, PostgreSQL, and Redis.",
+    "bio": "Software Engineer with 2 years of production experience building distributed microservices, low-latency database architectures, and asynchronous data pipelines in Java (Spring Boot) and Python (FastAPI). Contractual notice period: 30 days.",
     "resumeUrl": null,
     "social": {
       "email": "77abdulraheem@gmail.com",
@@ -19,52 +19,64 @@
   "coreSkills": [
     "Java",
     "Spring Boot",
+    "Distributed Systems",
     "Microservices",
     "REST APIs",
-    "Python",
-    "FastAPI",
-    "Azure SQL",
     "Azure Cosmos DB",
     "PostgreSQL",
-    "Android",
+    "Redis",
+    "Rate Limiting",
+    "Caching",
+    "Python",
+    "FastAPI",
+    "Docker",
+    "TCP/IP Sockets",
+    "HikariCP",
     "Git",
-    "Maven"
+    "Linux"
   ],
   "workExperiences": [
     {
       "id": "techmile",
-      "period": "Jan 2026 – Present",
-      "role": "Backend Developer",
+      "period": "Jan 2026 - Present",
+      "role": "Software Engineer",
       "company": "Insuremile",
       "companyUrl": "",
-      "description": "Led end-to-end migration of core Java microservices from JDK 8 to JDK 17, resolving Spring Boot dependency conflicts, API deprecations, and production integration issues. Built a Python sales automation service to generate daily reports and scheduled insights via automated API pipelines. Redesigned internal Android employee applications and integrated backend REST APIs. Configured Azure Cosmos DB document stores and managed API Gateway routing for service-to-service communication.",
+      "description": "Responsible for backend microservices architecture and database performance. Implemented distributed rate limiting and multi-tier Redis caching to sustain platform throughput under traffic spikes. Optimized HikariCP connection pools to eliminate connection timeouts. Tuned Azure Cosmos DB partition keys and query indexing across PostgreSQL and MongoDB to maintain sub-50ms latency. Modernized core services from JDK 8 to JDK 17 and built asynchronous data pipelines in Python with FastAPI.",
       "stack": [
-        "Java",
+        "Java 17",
         "Spring Boot",
-        "JDK 17",
-        "Python",
-        "REST APIs",
         "Azure Cosmos DB",
-        "API Gateway",
-        "Android"
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Rate Limiting",
+        "Caching",
+        "HikariCP",
+        "Python",
+        "FastAPI",
+        "Docker"
       ],
       "featured": true
     },
     {
       "id": "ignite3i",
-      "period": "Nov 2024 – Jan 2026",
+      "period": "Nov 2024 - Jan 2026",
       "role": "Software Engineer",
       "company": "Ignite3i",
       "companyUrl": "https://ignite3i.com/",
-      "description": "Engineered a binary log-code decoding system for network tower fault detection, automating error matching against technical manuals for root-cause diagnosis. Built 10+ RESTful APIs across a 5-service microservices architecture, supporting the entire insurance policy lifecycle (quote, proposal, KYC, payment, and policy download). Modernized backend service runtimes, designed API Gateway pipelines, and executed seamless database migrations from Supabase to Azure SQL.",
+      "description": "Engineered a low-latency Java socket service decoding raw binary telemetry packets from over 1,000 cell towers over TCP/IP in sub-seconds. Implemented idempotent payment APIs with unique request hashing to prevent duplicate transaction settlements during network retries. Migrated production database infrastructure from Supabase to Azure SQL, restructuring schemas to cut p95 query latency by 35%. Built REST APIs with Spring Security and JWT, writing test suites with JUnit 5 and Mockito.",
       "stack": [
         "Java",
         "Spring Boot",
-        "Microservices",
-        "REST APIs",
+        "TCP/IP Sockets",
         "Azure SQL",
-        "Supabase",
-        "Maven"
+        "Spring Security",
+        "JWT",
+        "JUnit 5",
+        "Mockito",
+        "Linux",
+        "Git"
       ],
       "featured": true
     }
@@ -105,7 +117,7 @@
   "education": [
     {
       "id": "mtech",
-      "period": "2024 – 2026",
+      "period": "2024 - 2026",
       "degree": "M.Tech in Computer Science",
       "institution": "University of Visvesvaraya College of Engineering",
       "location": "Bengaluru, India",
@@ -114,7 +126,7 @@
     },
     {
       "id": "be",
-      "period": "2019 – 2023",
+      "period": "2019 - 2023",
       "degree": "B.E. in Computer Science",
       "institution": "Atria Institute of Technology",
       "location": "Bengaluru, India",
@@ -157,7 +169,7 @@
     {
       "id": "tec-hunt",
       "period": "Activities",
-      "title": "Tec-Hunt Application – DEXTERIX",
+      "title": "Tec-Hunt Application - DEXTERIX",
       "description": "Engineered and deployed an Android application for the Tec-Hunt event at DEXTERIX, driving a 60% increase in campus event participation."
     }
   ]
