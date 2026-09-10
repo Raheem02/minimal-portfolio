@@ -36,7 +36,7 @@ export default function Home() {
         <title>{`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`}</title>
         <meta name="description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta name="author" content={profile.name || PROFILE.name} />
-        <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Development Engineer, SDE, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, Bengaluru, UVCE" />
+        <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Software Developer, Software Development Engineer, SDE, SWE, Backend Software Engineer, Java Software Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, Bengaluru, Bangalore, UVCE, Insuremile" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -86,6 +86,22 @@ export default function Home() {
                   '@id': 'https://raheem.page/#person',
                   name: PROFILE.name,
                   jobTitle: PROFILE.title,
+                  alternateName: [
+                    'Abdul Raheem Software Engineer',
+                    'Abdul Raheem Software Enginer',
+                    'Abdul Raheem SWE',
+                    'Abdul Raheem SDE',
+                    'Software Engineer',
+                    'Software Enginer',
+                    'Software Development Engineer',
+                  ],
+                  hasOccupation: {
+                    '@type': 'Occupation',
+                    name: 'Software Engineer',
+                    alternateName: ['Software Developer', 'Backend Software Engineer', 'SDE', 'SWE'],
+                    occupationalCategory: '15-1252.00',
+                    skills: 'Java, Spring Boot, Microservices, Distributed Systems, Azure Cosmos DB, PostgreSQL, Redis, REST APIs, Python, FastAPI, Docker',
+                  },
                   worksFor: {
                     '@type': 'Organization',
                     name: 'Insuremile',

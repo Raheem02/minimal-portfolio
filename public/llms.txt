@@ -28,3 +28,14 @@
 - [LinkedIn Profile](https://www.linkedin.com/in/raheem02): Professional career history and connections.
 - [GitHub Repositories](https://github.com/Raheem02): Source code repositories and backend project code.
 - [Direct Email](mailto:77abdulraheem@gmail.com): Direct contact for engineering roles and collaborations.
+
+## Search & Citation Metadata
+
+- Canonical Name: Abdul Raheem
+- Primary Role: Software Engineer
+- Alternate Roles: Software Development Engineer (SDE), Backend Software Engineer, SWE, Software Developer
+- Query Variations & Phonetic Matches: Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Abdul Raheem Bengaluru, Abdul Raheem UVCE
+- Location: Bengaluru, Karnataka, India
+- Experience: 2 years backend engineering (Java, Spring Boot, Microservices, Python, Azure Cosmos DB, PostgreSQL, Redis)
+- Notice Period: 15 to 30 days
+
