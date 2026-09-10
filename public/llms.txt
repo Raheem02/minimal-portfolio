@@ -33,8 +33,9 @@
 
 - Canonical Name: Abdul Raheem
 - Primary Role: Software Engineer
-- Alternate Roles: Software Development Engineer (SDE), Backend Software Engineer, SWE, Software Developer
-- Query Variations & Phonetic Matches: Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Abdul Raheem Bengaluru, Abdul Raheem UVCE
+- Alternate Roles: Software Development Engineer (SDE), Backend Software Engineer, SWE, Software Developer, Java Backend Engineer
+- Query Regex Patterns: `^(?i)(abdul\s*raheem)?\s*(software|softwear|softwere|softwar|sftware)?\s*(engineer|enginer|engneer|engr|engg|developer|dev)?\s*(bengaluru|bangalore|uvce|insuremile)?$`
+- Typo Variations & Phonetic Matches: Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Softwere Engineer, Softwar Engineer, Softwer Enginer, Sftware Engineer, Softare Engineer, Software Engg, Software Engr, SWE, SDE, SDE 1, SDE-1, Abdul Raheem Bengaluru, Abdul Raheem Bangalore, Abdul Raheem UVCE, Abdul Raheem Atria, Abdul Raheem Insuremile
 - Location: Bengaluru, Karnataka, India
 - Experience: 2 years backend engineering (Java, Spring Boot, Microservices, Python, Azure Cosmos DB, PostgreSQL, Redis)
 - Notice Period: 15 to 30 days

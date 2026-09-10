@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { motion, useReducedMotion } from 'framer-motion';
 import SidebarProfile from '../components/features/SidebarProfile';
 import NightyNightShader from '../components/features/NightyNightShader';
 import BentoProjects from '../components/features/BentoProjects';
@@ -12,20 +11,8 @@ import Footer from '../components/ui/Footer';
 import { PROFILE } from '../data/resumeData';
 import { usePortfolioData } from '../hooks/usePortfolioData';
 
-const pageVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  },
-};
-
 export default function Home() {
   const { data } = usePortfolioData();
-  const prefersReducedMotion = useReducedMotion();
   const { basePath } = useRouter();
   const base = basePath || '';
   const profile = data?.profile || PROFILE;
@@ -36,7 +23,7 @@ export default function Home() {
         <title>{`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`}</title>
         <meta name="description" content={profile.metaDescription || PROFILE.metaDescription} />
         <meta name="author" content={profile.name || PROFILE.name} />
-        <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Software Developer, Software Development Engineer, SDE, SWE, Backend Software Engineer, Java Software Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, Bengaluru, Bangalore, UVCE, Insuremile" />
+        <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Softwere Engineer, Softwar Engineer, Softwer Enginer, Sftware Engineer, Softare Engineer, Software Engg, Software Engr, Software Developer, Software Development Engineer, SDE, SDE 1, SDE-1, SDE I, SWE, Backend Software Engineer, Backend Developer, Java Software Engineer, Java Developer, Java Backend Engineer, Python Developer, Python Backend Developer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, TCP/IP Sockets, Bengaluru, Bangalore, UVCE, Atria, Insuremile, Ignite3i" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -86,21 +73,57 @@ export default function Home() {
                   '@id': 'https://raheem.page/#person',
                   name: PROFILE.name,
                   jobTitle: PROFILE.title,
+                  disambiguatingDescription: 'Software Engineer in Bengaluru with 2 years of backend experience in Java, Spring Boot, Python, Azure Cosmos DB, PostgreSQL, and Redis. Profile resolves queries for Software Engineer, Software Enginer, Softwear Engineer, SDE, and SWE.',
                   alternateName: [
-                    'Abdul Raheem Software Engineer',
-                    'Abdul Raheem Software Enginer',
+                    'Abdul Raheem',
                     'Abdul Raheem SWE',
                     'Abdul Raheem SDE',
+                    'Abdul Raheem Software Engineer',
+                    'Abdul Raheem Software Enginer',
+                    'Abdul Raheem Softwear Engineer',
+                    'Abdul Raheem Software Engneer',
+                    'Abdul Raheem Softwere Engineer',
+                    'Abdul Raheem Softwar Engineer',
+                    'Abdul Raheem Backend Engineer',
                     'Software Engineer',
                     'Software Enginer',
+                    'Softwear Engineer',
+                    'Software Engneer',
+                    'Softwere Engineer',
                     'Software Development Engineer',
+                    'SDE',
+                    'SWE',
+                    'Software Engineer Bengaluru',
+                    'Software Enginer Bengaluru',
+                    'Softwear Engineer Bengaluru',
+                    'Software Engineer Bangalore',
+                    'Software Enginer Bangalore',
+                    'Abdul Raheem Bengaluru',
+                    'Abdul Raheem Bangalore',
+                    'Abdul Raheem UVCE',
+                    'Abdul Raheem Atria',
+                    'Abdul Raheem Insuremile',
+                    'Abdul Raheem Ignite3i',
                   ],
                   hasOccupation: {
                     '@type': 'Occupation',
                     name: 'Software Engineer',
-                    alternateName: ['Software Developer', 'Backend Software Engineer', 'SDE', 'SWE'],
+                    alternateName: [
+                      'Software Developer',
+                      'Software Development Engineer',
+                      'SDE',
+                      'SDE 1',
+                      'SWE',
+                      'Backend Software Engineer',
+                      'Backend Developer',
+                      'Java Backend Engineer',
+                      'Java Developer',
+                      'Software Enginer',
+                      'Softwear Engineer',
+                      'Software Engneer',
+                    ],
                     occupationalCategory: '15-1252.00',
-                    skills: 'Java, Spring Boot, Microservices, Distributed Systems, Azure Cosmos DB, PostgreSQL, Redis, REST APIs, Python, FastAPI, Docker',
+                    skills: 'Java, Spring Boot, Microservices, Distributed Systems, Azure Cosmos DB, PostgreSQL, Redis, REST APIs, Python, FastAPI, Docker, TCP/IP Sockets, Rate Limiting, Caching, Connection Pooling',
                   },
                   worksFor: {
                     '@type': 'Organization',
@@ -164,10 +187,7 @@ export default function Home() {
         <NightyNightShader />
 
         {/* Main Content Layout */}
-        <motion.main
-          variants={prefersReducedMotion ? undefined : pageVariants}
-          initial={prefersReducedMotion ? false : 'hidden'}
-          animate={prefersReducedMotion ? false : 'visible'}
+        <main
           className="nighty-night-content max-w-6xl mx-auto px-4 py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-10 items-start"
         >
           <SidebarProfile profile={data?.profile} coreSkills={data?.coreSkills} />
@@ -179,7 +199,7 @@ export default function Home() {
             <PublicationsActivities items={data?.publicationsAndActivities} />
             <Footer />
           </div>
-        </motion.main>
+        </main>
       </div>
     </>
   );

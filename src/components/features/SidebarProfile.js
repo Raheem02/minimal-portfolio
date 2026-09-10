@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { PROFILE, CORE_SKILLS } from '../../data/resumeData';
 import SocialIcons from '../ui/SocialIcons';
 import { supabase } from '../../lib/supabaseClient';
-import { maskPhoneInPdfDataUrl } from '../../lib/pdfMasker';
 
 export const SidebarProfile = ({ profile: propProfile, coreSkills: propSkills }) => {
   const profile = propProfile || PROFILE;
@@ -30,7 +29,12 @@ export const SidebarProfile = ({ profile: propProfile, coreSkills: propSkills })
 
         if (!error && data?.data?.url) {
           let safeUrl = data.data.url;
-          try { safeUrl = await maskPhoneInPdfDataUrl(safeUrl); } catch {}
+          if (safeUrl && safeUrl.startsWith('data:application/pdf')) {
+            try {
+              const { maskPhoneInPdfDataUrl } = await import('../../lib/pdfMasker');
+              safeUrl = await maskPhoneInPdfDataUrl(safeUrl);
+            } catch {}
+          }
           setPdfResume({
             url: safeUrl,
             fileName: data.data.fileName || 'Abdul_Raheem_Resume.pdf',
@@ -48,7 +52,12 @@ export const SidebarProfile = ({ profile: propProfile, coreSkills: propSkills })
 
           if (historyRow?.url) {
             let safeUrl = historyRow.url;
-            try { safeUrl = await maskPhoneInPdfDataUrl(safeUrl); } catch {}
+            if (safeUrl && safeUrl.startsWith('data:application/pdf')) {
+              try {
+                const { maskPhoneInPdfDataUrl } = await import('../../lib/pdfMasker');
+                safeUrl = await maskPhoneInPdfDataUrl(safeUrl);
+              } catch {}
+            }
             setPdfResume({
               url: safeUrl,
               fileName: historyRow.file_name || 'Abdul_Raheem_Resume.pdf',
@@ -66,9 +75,12 @@ export const SidebarProfile = ({ profile: propProfile, coreSkills: propSkills })
     let targetUrl = pdfResume.url || `${base}/resume.pdf`;
 
     // Dynamically mask phone numbers on the fly right before download
-    try {
-      targetUrl = await maskPhoneInPdfDataUrl(targetUrl);
-    } catch (_) {}
+    if (targetUrl && targetUrl.startsWith('data:application/pdf')) {
+      try {
+        const { maskPhoneInPdfDataUrl } = await import('../../lib/pdfMasker');
+        targetUrl = await maskPhoneInPdfDataUrl(targetUrl);
+      } catch (_) {}
+    }
 
     if (targetUrl && targetUrl.startsWith('data:application/pdf')) {
       try {
