@@ -30,6 +30,15 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Bravebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
 # Machine-Readable Context for AI Agents
 # https://llmstxt.org
 # https://raheem.page/llms.txt
