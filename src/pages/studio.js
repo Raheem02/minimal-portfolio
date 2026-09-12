@@ -49,14 +49,14 @@ export default function HallmarkLivingCanvasAdmin() {
 
   // Default SEO fallback structure
   const defaultSeo = {
-    metaTitle: "Abdul Raheem · Backend Engineer",
+    metaTitle: "Abdul Raheem · Software Engineer",
     metaDescription:
-      "Backend Engineer specializing in Java Spring Boot microservices, RESTful APIs, Azure SQL, and cloud deployments.",
+      "Software Engineer in Bengaluru with 2 years of backend experience in Java, Spring Boot, Python, Azure Cosmos DB, PostgreSQL, and Redis.",
     keywords:
-      "Abdul Raheem, Backend Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure SQL, Azure Cosmos DB, Distributed Systems, Bengaluru, India",
-    ogTitle: "Abdul Raheem · Backend Engineer Portfolio",
+      "Abdul Raheem, Software Engineer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Distributed Systems, Bengaluru, India",
+    ogTitle: "Abdul Raheem · Software Engineer Portfolio",
     ogDescription:
-      "Backend Engineer focused on distributed systems, Java Spring Boot microservices, and production API design.",
+      "Software Engineer with 2 years of backend production experience in Java, Spring Boot, Python, Azure Cosmos DB, PostgreSQL, and Redis.",
     ogImage: "https://raheem.page/og-image.webp",
     canonicalUrl: "https://raheem.page/",
   }

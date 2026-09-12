@@ -25,7 +25,10 @@ export function usePortfolioData() {
           return
         }
 
+        const BUILD_TIMESTAMP = new Date('2026-09-12T07:00:00Z').getTime()
         const merged = { ...resumeDataFallback }
+        let hasNewerData = false
+
         rows.forEach((row) => {
           if (
             row.section_key &&
@@ -33,12 +36,16 @@ export function usePortfolioData() {
             row.section_key !== "pdf_resume" &&
             row.section_key !== "resume_downloads"
           ) {
-            merged[row.section_key] = row.data
+            const rowTime = row.updated_at ? new Date(row.updated_at).getTime() : 0
+            // Only adopt remote CMS data if it was explicitly updated after this production release
+            if (rowTime > BUILD_TIMESTAMP) {
+              merged[row.section_key] = row.data
+              hasNewerData = true
+            }
           }
         })
 
-        // Only update state if remote data actually differs from baked-in fallback
-        if (JSON.stringify(merged) !== JSON.stringify(resumeDataFallback)) {
+        if (hasNewerData) {
           setData(merged)
           setIsFromSupabase(true)
         }
@@ -50,21 +57,8 @@ export function usePortfolioData() {
 
     fetchFromSupabase()
 
-    // Subscribe to realtime changes in portfolio_content table
-    const channel = supabase
-      .channel("portfolio_content_realtime")
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "portfolio_content" },
-        () => {
-          fetchFromSupabase()
-        }
-      )
-      .subscribe()
-
     return () => {
       isMounted = false
-      supabase.removeChannel(channel)
     }
   }, [])
 

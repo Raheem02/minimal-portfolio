@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
         <style dangerouslySetInnerHTML={{ __html: `
           .nighty-night-shell { background-color: #17181c; }
           .nighty-night-content { display: flex; flex-direction: column; }

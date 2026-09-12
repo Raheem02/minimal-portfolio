@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import SidebarProfile from '../components/features/SidebarProfile';
 import NightyNightShader from '../components/features/NightyNightShader';
 import BentoProjects from '../components/features/BentoProjects';
@@ -13,33 +12,31 @@ import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export default function Home() {
   const { data } = usePortfolioData();
-  const { basePath } = useRouter();
-  const base = basePath || '';
-  const profile = data?.profile || PROFILE;
 
   return (
     <>
       <Head>
-        <title>{`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`}</title>
-        <meta name="description" content={profile.metaDescription || PROFILE.metaDescription} />
-        <meta name="author" content={profile.name || PROFILE.name} />
+        <title>{`${PROFILE.name} · ${PROFILE.title}`}</title>
+        <meta name="description" content={PROFILE.metaDescription} />
+        <meta name="author" content={PROFILE.name} />
         <meta name="keywords" content="Abdul Raheem, Software Engineer, Software Enginer, Software Engneer, Softwear Engineer, Softwere Engineer, Softwar Engineer, Softwer Enginer, Sftware Engineer, Softare Engineer, Software Engg, Software Engr, Software Developer, Software Development Engineer, SDE, SDE 1, SDE-1, SDE I, SWE, Backend Software Engineer, Backend Developer, Java Software Engineer, Java Developer, Java Backend Engineer, Python Developer, Python Backend Developer, Java, Spring Boot, Microservices, REST APIs, Python, FastAPI, Azure Cosmos DB, PostgreSQL, Redis, Rate Limiting, Caching, Docker, Distributed Systems, TCP/IP Sockets, Bengaluru, Bangalore, UVCE, Atria, Insuremile, Ignite3i" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#17181c" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="canonical" href="https://raheem.page/" />
-        <link rel="alternate" type="text/plain" href={`${base}/llms.txt`} title="LLM Machine-Readable Summary" />
-        <link rel="alternate" type="text/markdown" href={`${base}/resume.md`} title="Machine-Readable Resume" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Machine-Readable Summary" />
+        <link rel="alternate" type="text/markdown" href="/resume.md" title="Machine-Readable Resume" />
         <meta name="indexnow-key" content="5f4b8e21a09c4d3e8f1b6a7c9d0e2f4a" />
         <meta name="msvalidate.01" content="C0B719F693E4D9FFE05ED9756C6D9366" />
         
         {/* OpenGraph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://raheem.page/" />
-        <meta property="og:site_name" content={`${profile.name || PROFILE.name} Portfolio`} />
+        <meta property="og:site_name" content={`${PROFILE.name} Portfolio`} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content={`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`} />
-        <meta property="og:description" content={profile.metaDescription || PROFILE.metaDescription} />
+        <meta property="og:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
+        <meta property="og:description" content={PROFILE.metaDescription} />
         <meta property="og:image" content="https://raheem.page/og-image.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -48,18 +45,18 @@ export default function Home() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://raheem.page/" />
-        <meta name="twitter:title" content={`${profile.name || PROFILE.name} · ${profile.title || PROFILE.title}`} />
-        <meta name="twitter:description" content={profile.metaDescription || PROFILE.metaDescription} />
+        <meta name="twitter:title" content={`${PROFILE.name} · ${PROFILE.title}`} />
+        <meta name="twitter:description" content={PROFILE.metaDescription} />
         <meta name="twitter:image" content="https://raheem.page/og-image.webp" />
         <meta name="twitter:image:alt" content="Abdul Raheem - Software Engineer Portfolio" />
 
         {/* Asset preconnects and LCP Preload */}
         <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
-        <link rel="preload" href={`${base}/profile-160.webp`} as="image" type="image/webp" fetchPriority="high" />
-        <link rel="icon" href={`${base}/favicon.ico`} sizes="any" />
-        <link rel="icon" href={`${base}/profile-favicon.webp`} type="image/webp" />
-        <link rel="apple-touch-icon" href={`${base}/profile-favicon.webp`} />
+        <link rel="preload" href="/profile-160.webp" as="image" type="image/webp" fetchPriority="high" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/profile-favicon.webp" type="image/webp" />
+        <link rel="apple-touch-icon" href="/profile-favicon.webp" />
 
         {/* Structured Data (JSON-LD) */}
         <script
@@ -161,6 +158,7 @@ export default function Home() {
                   ],
                   sameAs: [PROFILE.linkedin, PROFILE.social.github],
                   url: PROFILE.website,
+                  image: 'https://raheem.page/profile-160.webp',
                 },
                 {
                   '@type': 'ProfilePage',
@@ -168,6 +166,9 @@ export default function Home() {
                   url: PROFILE.website,
                   name: `${PROFILE.name} · ${PROFILE.title}`,
                   description: PROFILE.bio,
+                  image: 'https://raheem.page/profile-160.webp',
+                  dateCreated: '2024-01-01T00:00:00+05:30',
+                  dateModified: '2026-09-12T00:00:00+05:30',
                   mainEntity: { '@id': 'https://raheem.page/#person' },
                 },
                 {
