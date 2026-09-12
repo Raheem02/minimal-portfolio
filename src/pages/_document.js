@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' https: data:; img-src 'self' data: https: blob:; connect-src 'self' https:;" />
         <style dangerouslySetInnerHTML={{ __html: `
           .nighty-night-shell { background-color: #17181c; }
           .nighty-night-content { display: flex; flex-direction: column; }
